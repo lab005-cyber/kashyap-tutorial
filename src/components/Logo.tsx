@@ -18,15 +18,15 @@ export default function Logo({
   variant = "default",
 }: LogoProps) {
   const textColor = variant === "light" ? "text-white" : "text-navy-950";
-  const subColor = variant === "light" ? "text-navy-600 font-bold" : "text-navy-600 font-semibold";
+  const subColor = variant === "light" ? "text-grey-300" : "text-navy-600 font-semibold";
 
   return (
     <Link
       href="/"
       aria-label={`${siteConfig.name} home`}
-      className={`group inline-flex items-center gap-2.5 sm:gap-3 py-1 ${className}`}
+      className={`group inline-flex items-center gap-2.5 sm:gap-3 ${className}`}
     >
-      <span className="relative flex h-10 w-10 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-full overflow-hidden transition-transform duration-300 group-hover:scale-105 shadow-sm">
+      <span className="relative flex h-10 w-10 sm:h-11 sm:w-11 shrink-0 items-center justify-center rounded-full overflow-hidden shadow-md ring-1 ring-black/10 transition-transform duration-300 group-hover:scale-105">
         <Image
           src="/images/logo-original.webp"
           alt="Kashyap Tutorial Logo"
