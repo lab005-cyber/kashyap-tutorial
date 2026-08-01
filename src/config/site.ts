@@ -58,7 +58,6 @@ export const siteConfig = {
   /* ----------------- NAVIGATION ----------------- */
   nav: [
     { label: "Home", href: "/" },
-    { label: "Find a Tutor", href: "/#presence" },
     { label: "Courses", href: "/courses" },
     { label: "Tutors", href: "/tutors" },
     { label: "Results", href: "/results" },
