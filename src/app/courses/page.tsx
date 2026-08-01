@@ -10,7 +10,7 @@ import { FiCheckCircle, FiArrowRight } from "react-icons/fi";
 export const metadata: Metadata = {
   title: "Courses & Programs",
   description:
-    "Explore coaching and home tuition programs at Kashyap Tutorial: Classes 6–8, 9–10 boards, 11–12 Science & Commerce, competitive exams, and 1-on-1 home tuition.",
+    "Explore coaching and home tuition programs at Kashyap Tutorial: Classes 6–8, 9–10 boards, 11–12 PCM & PCB Science, competitive exams, and 1-on-1 home tuition.",
   alternates: { canonical: "/courses" },
 };
 

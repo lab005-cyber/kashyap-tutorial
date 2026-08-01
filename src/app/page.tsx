@@ -311,11 +311,11 @@ export default function HomePage() {
                     <h3 className="font-display text-lg font-bold text-navy-900">
                       Class 11th &amp; 12th (Topper&apos;s Preparation)
                     </h3>
-                    <p className="text-xs font-semibold text-purple-700">CBSE &amp; ICSE Boards (PCM / PCB / Commerce)</p>
+                    <p className="text-xs font-semibold text-purple-700">CBSE &amp; ICSE Boards (PCM / PCB)</p>
                   </div>
                 </div>
                 <p className="mt-3 text-sm text-grey-600">
-                  Subject expert faculty led by Er. N. Jha Sir. Physics, Chemistry, Mathematics, Biology, Accounts &amp; Economics.
+                  Subject expert faculty led by Er. N. Jha Sir. Mathematics, Physics, Chemistry &amp; Biology.
                 </p>
               </div>
 
@@ -509,7 +509,7 @@ export default function HomePage() {
                   { p: "98.4%", n: "Aarav P.", c: "Class 10 CBSE", icon: "rank-1" },
                   { p: "96.2%", n: "Diya S.", c: "Class 12 Science", icon: "rank-2" },
                   { p: "95.8%", n: "Ishaan G.", c: "Class 10 ICSE", icon: "trophy" },
-                  { p: "95.0%", n: "Sneha R.", c: "Class 12 Commerce", icon: "star" },
+                  { p: "95.0%", n: "Sneha R.", c: "Class 12 PCB Science", icon: "star" },
                 ].map((t) => (
                   <div
                     key={t.n}

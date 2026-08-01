@@ -40,11 +40,11 @@ export const siteConfig = {
 
   /* ----------------- SOCIAL MEDIA ----------------- */
   social: {
-    facebook: "https://facebook.com/",
-    instagram: "https://instagram.com/",
-    youtube: "https://youtube.com/",
+    facebook: "https://www.facebook.com/kashyaptutorial014",
+    instagram: "https://www.instagram.com/kashyaptutorial",
+    youtube: "https://youtube.com/@kashyaptutorial",
     twitter: "",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/company/kashyap-tutorial/",
   },
 
   /* ----------------- KEY METRICS (Hero) ----------------- */
@@ -156,17 +156,17 @@ export const courses: Course[] = [
     fee: "Per visit / monthly",
   },
   {
-    slug: "commerce-11-12",
-    title: "Class 11 & 12 (Commerce)",
-    level: "Senior Secondary",
-    icon: "chart",
+    slug: "pcb-11-12",
+    title: "Class 11 & 12 (PCB / Biology)",
+    level: "Senior Secondary & NEET",
+    icon: "science",
     blurb:
-      "Accountancy, Business Studies & Economics coaching with practical numerical practice and concept mastery.",
+      "Comprehensive Biology, Physics & Chemistry coaching for Class 11-12 Board Exams and NEET (UG) medical entrance.",
     highlights: [
-      "Accounts problem-solving",
-      "BST & Eco concept clarity",
-      "Project work guidance",
-      "Regular assessments",
+      "NCERT line-by-line mastery",
+      "Diagram & reasoning drills",
+      "NEET previous years questions",
+      "Weekly test series",
     ],
     fee: "Flexible plans",
   },
@@ -262,13 +262,13 @@ export const testimonials: Testimonial[] = [
 /* ----------------- RESULTS / Toppers ----------------- */
 export const toppers = [
   { name: "Aarav Patel", class: "Class 10 CBSE", percentage: "98.4%", year: "2024", badge: "Top Rank 1" },
-  { name: "Diya Sharma", class: "Class 12 Science", percentage: "96.2%", year: "2024", badge: "Topper Rank 2" },
+  { name: "Diya Sharma", class: "Class 12 PCM (Science)", percentage: "96.2%", year: "2024", badge: "Topper Rank 2" },
   { name: "Ishaan Gupta", class: "Class 10 ICSE", percentage: "95.8%", year: "2024", badge: "Distinction" },
-  { name: "Sneha Rao", class: "Class 12 Commerce", percentage: "95.0%", year: "2024", badge: "Star Scorer" },
+  { name: "Sneha Rao", class: "Class 12 PCB (Science)", percentage: "95.0%", year: "2024", badge: "Star Scorer" },
   { name: "Vivaan Kumar", class: "Class 10 CBSE", percentage: "94.6%", year: "2023", badge: "Distinction" },
-  { name: "Ananya Reddy", class: "Class 12 Science", percentage: "94.2%", year: "2023", badge: "Distinction" },
+  { name: "Ananya Reddy", class: "Class 12 PCM (Science)", percentage: "94.2%", year: "2023", badge: "Distinction" },
   { name: "Aditya Nair", class: "Class 10 CBSE", percentage: "93.8%", year: "2023", badge: "Star Scorer" },
-  { name: "Riya Jain", class: "Class 12 Commerce", percentage: "93.4%", year: "2023", badge: "Star Scorer" },
+  { name: "Riya Jain", class: "Class 12 PCB (Science)", percentage: "93.4%", year: "2023", badge: "Star Scorer" },
 ];
 
 /* ----------------- FAQ ----------------- */
@@ -279,7 +279,7 @@ export const faqs = [
   },
   {
     q: "Who leads the faculty at Kashyap Tutorial?",
-    a: "Our core faculty is led by Er. N. Jha Sir (Maths Faculty, Mentor, Guide, Motivator) along with a team of experienced subject experts for Physics, Chemistry, Biology, Commerce & Foundation subjects.",
+    a: "Our core faculty is led by Er. N. Jha Sir (Maths Faculty, Mentor, Guide, Motivator) along with a team of experienced subject experts for Physics, Chemistry, Biology & Foundation subjects.",
   },
   {
     q: "Do you provide Home Tuition for all classes?",
@@ -404,17 +404,17 @@ export const tutors: Tutor[] = [
       "Specialist in building conceptual foundation in Physics & Chemistry for middle and high school students.",
   },
   {
-    id: "amit-srivastava",
-    name: "Amit Srivastava",
-    subjects: ["Accountancy", "Business Studies", "Economics"],
+    id: "pankaj-sharma",
+    name: "Dr. Pankaj Sharma",
+    subjects: ["Chemistry", "NEET Prep", "JEE Organic Chemistry"],
     city: "Greater Noida / Ghaziabad",
-    experience: 10,
-    classes: "Class 11 – 12 Commerce",
+    experience: 11,
+    classes: "Class 11 – 12 (PCM / PCB)",
     rating: 4.9,
-    studentsTaught: 540,
+    studentsTaught: 580,
     mode: "Classroom · Online",
     highlight:
-      "Commerce specialist who teaches with real-world case studies, practical problem solving and past-paper drills.",
+      "Chemistry specialist who builds deep understanding in Organic, Physical & Inorganic Chemistry for Boards & NEET.",
   },
   {
     id: "neha-agarwal",

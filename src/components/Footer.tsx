@@ -9,6 +9,7 @@ import {
   FiFacebook,
   FiInstagram,
   FiYoutube,
+  FiLinkedin,
 } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -69,6 +70,11 @@ export default function Footer() {
                 <FiYoutube />
               </SocialIcon>
             )}
+            {s.linkedin && (
+              <SocialIcon href={s.linkedin} label="LinkedIn">
+                <FiLinkedin />
+              </SocialIcon>
+            )}
           </div>
         </div>
 
@@ -104,12 +110,12 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/courses" className="text-grey-400 hover:text-accent">
-                Class 11 &amp; 12 Science
+                Class 11 &amp; 12 PCM (Maths)
               </Link>
             </li>
             <li>
               <Link href="/courses" className="text-grey-400 hover:text-accent">
-                Class 11 &amp; 12 Commerce
+                Class 11 &amp; 12 PCB (Biology / NEET)
               </Link>
             </li>
             <li>
@@ -119,7 +125,7 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/courses" className="text-grey-400 hover:text-accent">
-                Competitive Exam Prep
+                IIT-JEE / NEET / CUET
               </Link>
             </li>
           </ul>

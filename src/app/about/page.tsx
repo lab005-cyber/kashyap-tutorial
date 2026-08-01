@@ -190,7 +190,7 @@ export default function AboutPage() {
               <h2 className="heading-sm mt-4">Quality Education with Full Accountability</h2>
               <ul className="mt-6 space-y-4">
                 {[
-                  "Expert faculty led by Er. N. Jha Sir for Maths & subject specialists for Physics, Chemistry, Biology & Commerce",
+                  "Expert faculty led by Er. N. Jha Sir for Maths & subject specialists for Physics, Chemistry & Biology",
                   "Class 6 to 12 (CBSE & ICSE Boards), IIT-JEE, NEET (UG), CUET preparation",
                   "Home Tuitions (KG to 12th) with verified & experienced tutors",
                   "Small batch size for personal attention & doubt resolution",

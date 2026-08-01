@@ -127,13 +127,11 @@ export default function ContactForm() {
             <option value="" disabled>
               Select class
             </option>
-            <option>Class 6 - 8</option>
-            <option>Class 9</option>
-            <option>Class 10</option>
-            <option>Class 11 (Science)</option>
-            <option>Class 11 (Commerce)</option>
-            <option>Class 12 (Science)</option>
-            <option>Class 12 (Commerce)</option>
+            <option>Class 6 - 8 Foundation</option>
+            <option>Class 9 (CBSE / ICSE)</option>
+            <option>Class 10 (Boards)</option>
+            <option>Class 11 (PCM / PCB)</option>
+            <option>Class 12 (PCM / PCB)</option>
             <option>IIT-JEE / NEET / CUET</option>
             <option>Home Tuition (KG-12th)</option>
           </select>
