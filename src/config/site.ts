@@ -391,10 +391,10 @@ export const tutors: Tutor[] = [
       "Lead Maths Faculty & Founder Mentor. Known for making complex JEE & Board concepts intuitive and scoring.",
   },
   {
-    id: "managing-director",
-    name: "Managing Director",
+    id: "pankaj-jha-sir-md",
+    name: "Pankaj Jha Sir",
     image: "/images/faculty-md.webp",
-    subjects: ["Managing Director", "Physics", "Academic Leadership"],
+    subjects: ["Managing Director (MD)", "Physics", "Academic Leadership"],
     city: "Greater Noida (Alpha 1)",
     experience: 35,
     classes: "Class 9th – 12th & Entrance Mentoring",
@@ -402,7 +402,7 @@ export const tutors: Tutor[] = [
     studentsTaught: 3500,
     mode: "Classroom · Institutional Management",
     highlight:
-      "Managing Director with 35+ years of visionary academic leadership, institutional excellence, and mentoring generations of board & entrance toppers.",
+      "Managing Director (MD) of Kashyap Tutorial & Home Tuition with 35+ years of visionary academic leadership, institutional excellence, and mentoring generations of board & entrance toppers.",
   },
   {
     id: "riddhima-maam",
