@@ -405,6 +405,20 @@ export const tutors: Tutor[] = [
       "7+ years experienced senior educator specializing in KG to 10th grade foundation, conceptual clarity, and personalized offline & online mentoring.",
   },
   {
+    id: "muskan-sodhi",
+    name: "Muskan Sodhi Ma'am",
+    image: "/images/faculty-muskan.webp",
+    subjects: ["All Core Subjects (KG-8th)", "Mathematics", "Science", "English"],
+    city: "Greater Noida (Alpha 1)",
+    experience: 5,
+    classes: "KG – Class 8th",
+    rating: 5.0,
+    studentsTaught: 380,
+    mode: "Classroom · Home Tuition · Live Online",
+    highlight:
+      "5+ years experienced dedicated foundation educator specializing in KG to 8th grade conceptual clarity, personalized care, and offline & online mentoring.",
+  },
+  {
     id: "priya-malhotra",
     name: "Priya Malhotra",
     subjects: ["Science", "Physics"],
