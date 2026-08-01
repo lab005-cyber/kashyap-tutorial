@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Poppins } from "next/font/google";
+import { Inter, Sora } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import TopBar from "@/components/TopBar";
@@ -12,10 +12,10 @@ const inter = Inter({
   variable: "--font-inter",
   display: "swap",
 });
-const poppins = Poppins({
+const sora = Sora({
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],
-  variable: "--font-poppins",
+  variable: "--font-sora",
   display: "swap",
 });
 
@@ -117,7 +117,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${inter.variable} ${sora.variable}`}>
       <head>
         <script
           type="application/ld+json"

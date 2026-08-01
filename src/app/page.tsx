@@ -33,107 +33,160 @@ export default function HomePage() {
 
       {/* ============ HERO SECTION ============ */}
       <section className="relative overflow-hidden bg-gradient-to-b from-navy-950 via-navy-900 to-navy-800 text-white">
-        {/* Glowing background light accents */}
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -right-20 -top-20 h-[500px] w-[500px] rounded-full bg-accent/20 blur-[120px]" />
-          <div className="absolute -bottom-32 -left-20 h-[450px] w-[450px] rounded-full bg-blue-600/20 blur-[100px]" />
+        {/* Animated Background Blobs & Particle Lighting */}
+        <div className="pointer-events-none absolute inset-0 overflow-hidden">
+          <div className="absolute -right-20 -top-20 h-[550px] w-[550px] rounded-full bg-accent/20 blur-[130px] animate-pulse-glow" />
+          <div className="absolute -bottom-32 -left-20 h-[500px] w-[500px] rounded-full bg-blue-600/20 blur-[120px] animate-pulse-glow" style={{ animationDelay: "1.5s" }} />
+          <div className="absolute top-1/3 left-1/2 -translate-x-1/2 h-[350px] w-[350px] rounded-full bg-emerald-500/10 blur-[100px] pointer-events-none" />
+          {/* Ambient Particle Grid */}
+          <div
+            className="absolute inset-0 opacity-[0.04] pointer-events-none"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 2px 2px, white 1px, transparent 0)",
+              backgroundSize: "32px 32px",
+            }}
+          />
         </div>
 
         <div className="container-x relative py-16 sm:py-20 lg:py-24">
           <div className="grid items-center gap-12 lg:grid-cols-12">
-
-            {/* Left Column: Headlines & Call to Action */}
+            
+            {/* Left Column: Punchline Headlines & CTAs */}
             <div className="lg:col-span-7">
-              <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-xs sm:text-sm font-semibold text-accent backdrop-blur-md">
+              {/* Header Badge */}
+              <div className="inline-flex items-center gap-2.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-xs sm:text-sm font-bold text-accent backdrop-blur-md">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
                 </span>
-                Admissions Open Now · Offline &amp; Online Classes
-                <span className="hidden sm:inline text-white/40">|</span>
-                <span className="hidden sm:inline-flex items-center gap-1 text-amber-300">
-                  <FiStar className="fill-amber-400 text-amber-400" /> 200+ 5-Star Reviews
+                Trusted by 5000+ Students
+                <span className="text-white/30">|</span>
+                <span className="inline-flex items-center gap-1 text-amber-300">
+                  <FiStar className="fill-amber-400 text-amber-400 h-3.5 w-3.5" /> 4.9 Rating
                 </span>
               </div>
 
-              <h1 className="mt-6 font-display text-3xl font-extrabold leading-[1.15] tracking-tight sm:text-5xl lg:text-6xl">
-                Building Strong Concepts, <br className="hidden sm:block" />
-                Shaping <span className="text-accent underline decoration-accent/40 decoration-wavy decoration-2">Bright Futures</span>
+              {/* Punchline Main Title */}
+              <h1 className="mt-6 font-display text-4xl font-extrabold leading-[1.12] tracking-tight sm:text-5xl lg:text-6xl text-white">
+                Rankers Don&apos;t Study Hard. <br />
+                <span className="bg-gradient-to-r from-amber-300 via-accent to-amber-400 bg-clip-text text-transparent underline decoration-accent/40 decoration-wavy decoration-2">
+                  They Study Smart.
+                </span>
               </h1>
 
-              <p className="mt-6 max-w-2xl text-base sm:text-lg leading-relaxed text-grey-300">
-                Quality education from <span className="font-semibold text-white">Basics to Brilliance</span>. Classroom coaching at <span className="text-amber-300 font-semibold">Alpha 1, Greater Noida</span> &amp; 1-on-1 Home Tuitions in 5 cities — guided by <span className="font-semibold text-white">Er. N. Jha Sir &amp; Teams</span>.
+              {/* Sub-headline / Tagline */}
+              <p className="mt-4 font-display text-lg sm:text-xl font-bold text-amber-300">
+                India&apos;s Premium Home Tuition &amp; Coaching Platform.
               </p>
 
-              {/* Quick Course Badges */}
-              <div className="mt-6 flex flex-wrap gap-2">
-                {[
-                  "Class 6 – 8",
-                  "Class 9 & 10 Boards",
-                  "Class 11 & 12",
-                  "IIT-JEE",
-                  "NEET (UG)",
-                  "CUET",
-                  "Home Tuition (KG-12th)",
-                ].map((badge) => (
-                  <span
-                    key={badge}
-                    className="rounded-lg bg-white/10 px-3 py-1 text-xs font-semibold text-grey-200 border border-white/10 hover:border-accent/40 transition-colors"
-                  >
-                    {badge}
+              <p className="mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-grey-300">
+                Quality education from <span className="font-semibold text-white">Basics to Brilliance</span>. Classroom coaching at <span className="text-white font-semibold">Alpha 1, Greater Noida</span> &amp; 1-on-1 Home Tuitions in 5 cities — guided by <span className="font-semibold text-white">Er. N. Jha Sir &amp; Teams</span>.
+              </p>
+
+              {/* Trust Metric Stat Badges Strip */}
+              <div className="mt-8 grid grid-cols-3 gap-3 border-y border-white/10 py-4 max-w-lg">
+                <div className="flex items-center gap-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-amber-400 text-lg border border-white/15">
+                    ⭐
                   </span>
-                ))}
+                  <div>
+                    <p className="font-display text-base font-extrabold text-white">4.9 Rating</p>
+                    <p className="text-[11px] text-grey-300">Google Reviews</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 border-l border-white/10 pl-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-emerald-400 text-lg border border-white/15">
+                    👨‍🎓
+                  </span>
+                  <div>
+                    <p className="font-display text-base font-extrabold text-white">5000+</p>
+                    <p className="text-[11px] text-grey-300">Students Mentored</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-3 border-l border-white/10 pl-3">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/10 text-amber-300 text-lg border border-white/15">
+                    🏆
+                  </span>
+                  <div>
+                    <p className="font-display text-base font-extrabold text-white">10+ Yrs</p>
+                    <p className="text-[11px] text-grey-300">Experience</p>
+                  </div>
+                </div>
               </div>
 
+              {/* Action Buttons */}
               <div className="mt-8 flex flex-wrap items-center gap-4">
-                <Link href="/contact" className="btn-accent text-base px-6 py-3.5 shadow-lg shadow-amber-500/20">
-                  Book Free Demo Class <FiArrowRight className="h-5 w-5" />
+                <Link href="/contact" className="btn-accent text-base px-7 py-3.5 shadow-xl shadow-amber-500/25 hover:scale-[1.02] transition-transform font-extrabold">
+                  Book Free Demo <FiArrowRight className="h-5 w-5" />
                 </Link>
+
+                <Link
+                  href="/results"
+                  className="btn inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white font-bold text-base px-6 py-3.5 border border-white/20 backdrop-blur-md transition-all shadow-md"
+                >
+                  <FiAward className="h-5 w-5 text-amber-400" /> Watch Success Stories
+                </Link>
+
                 <a
                   href={`https://wa.me/${c.whatsapp}?text=${encodeURIComponent("Hello! I want to enquire about classes & demo session.")}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn inline-flex bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-base px-6 py-3.5 shadow-lg shadow-emerald-600/20"
+                  className="btn inline-flex bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-base px-5 py-3.5 shadow-lg shadow-emerald-600/20"
                 >
                   <FaWhatsapp className="h-5 w-5" /> WhatsApp Us
                 </a>
-                <a
-                  href={`tel:${c.phoneHref}`}
-                  className="btn inline-flex bg-white/10 hover:bg-white/20 text-white font-semibold text-base px-5 py-3.5 border border-white/15"
-                >
-                  <FiPhone className="h-5 w-5 text-accent" /> Call {c.phone}
-                </a>
               </div>
 
-              <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 border-t border-white/10 pt-6 text-xs sm:text-sm text-grey-300">
+              {/* Quick Trust Checks */}
+              <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-xs sm:text-sm text-grey-300">
                 <span className="flex items-center gap-2">
-                  <FiCheckCircle className="text-accent shrink-0" /> Personal Attention
+                  <FiCheckCircle className="text-amber-400 shrink-0" /> Personal Attention
                 </span>
                 <span className="flex items-center gap-2">
-                  <FiCheckCircle className="text-accent shrink-0" /> Doubt Sessions
+                  <FiCheckCircle className="text-amber-400 shrink-0" /> Doubt Solving Sessions
                 </span>
                 <span className="flex items-center gap-2">
-                  <FiCheckCircle className="text-accent shrink-0" /> Smart Learning
+                  <FiCheckCircle className="text-amber-400 shrink-0" /> Verified Tutors
                 </span>
                 <span className="flex items-center gap-2">
-                  <FiCheckCircle className="text-accent shrink-0" /> Regular Tests
-                </span>
-                <span className="flex items-center gap-2">
-                  <FiCheckCircle className="text-accent shrink-0" /> Verified Tutors
-                </span>
-                <span className="flex items-center gap-2">
-                  <FiCheckCircle className="text-accent shrink-0" /> Parent Updates
+                  <FiCheckCircle className="text-amber-400 shrink-0" /> Regular Test Series
                 </span>
               </div>
             </div>
 
-            {/* Right Column: Faculty Feature Card with Er. N. Jha Sir's Official Photo */}
-            <div className="lg:col-span-5">
+            {/* Right Column: Glassmorphic Faculty Card with Floating 3D Micro-Elements */}
+            <div className="lg:col-span-5 relative">
+              
+              {/* Floating 3D Micro-Element 1: Top Floating Badge */}
+              <div className="hidden sm:flex absolute -top-6 -left-6 z-20 items-center gap-2.5 rounded-2xl border border-white/20 bg-navy-900/90 px-4 py-2.5 backdrop-blur-xl shadow-xl animate-float">
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-amber-400 text-navy-950 font-bold">
+                  🏆
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-white">Top Ranks 2024</p>
+                  <p className="text-[11px] text-amber-300">98.4% CBSE Topper</p>
+                </div>
+              </div>
+
+              {/* Floating 3D Micro-Element 2: Right Floating Badge */}
+              <div className="hidden sm:flex absolute top-1/2 -right-6 z-20 items-center gap-2.5 rounded-2xl border border-white/20 bg-navy-900/90 px-4 py-2.5 backdrop-blur-xl shadow-xl animate-float" style={{ animationDelay: "2s" }}>
+                <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-500 text-white font-bold">
+                  <FaGraduationCap className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-white">100% Concept Focus</p>
+                  <p className="text-[11px] text-emerald-300">Basics to Brilliance</p>
+                </div>
+              </div>
+
               <Reveal>
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Glowing card border container */}
                   <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-b from-white/15 to-white/5 p-4 sm:p-5 backdrop-blur-xl shadow-2xl">
-
+                    
                     {/* Faculty Photo */}
                     <div className="relative h-80 sm:h-96 w-full overflow-hidden rounded-2xl bg-navy-950">
                       <Image
