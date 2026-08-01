@@ -1,8 +1,9 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Metadata } from "next";
-import { siteConfig } from "@/config/site";
+import { siteConfig, tutors } from "@/config/site";
 import Reveal from "@/components/Reveal";
+import StarRating from "@/components/StarRating";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/seo";
 import {
@@ -12,6 +13,9 @@ import {
   FiArrowRight,
   FiCheckCircle,
   FiStar,
+  FiMapPin,
+  FiUsers,
+  FiAward,
 } from "react-icons/fi";
 import { FaWhatsapp } from "react-icons/fa";
 
@@ -152,6 +156,105 @@ export default function AboutPage() {
               </div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Mentors */}
+      <section className="section bg-white border-t border-grey-200">
+        <div className="container-x">
+          <div className="mx-auto max-w-2xl text-center">
+            <span className="eyebrow">Expert Faculty &amp; Mentors</span>
+            <h2 className="heading mt-4">Meet Our Lead Educators</h2>
+            <p className="mt-3 text-grey-600">
+              Experienced, dedicated subject experts delivering personalized offline classroom, 1-on-1 home tuition, and live online coaching.
+            </p>
+          </div>
+
+          <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
+            {tutors.slice(0, 2).map((t, i) => (
+              <Reveal key={t.id} delay={i * 100}>
+                <article className="card group flex h-full flex-col hover:-translate-y-1.5 hover:border-navy-300 hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-start gap-4">
+                    {t.image ? (
+                      <Image
+                        src={t.image}
+                        alt={t.name}
+                        width={84}
+                        height={84}
+                        priority
+                        className="h-20 w-20 shrink-0 rounded-2xl object-cover object-top border-2 border-amber-400 shadow-md"
+                      />
+                    ) : (
+                      <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-navy-900 font-display text-xl font-bold text-accent">
+                        {t.name.slice(0, 2)}
+                      </span>
+                    )}
+                    <div className="min-w-0">
+                      <h3 className="font-display text-xl font-extrabold text-navy-900 group-hover:text-navy-700">
+                        {t.name}
+                      </h3>
+                      <p className="mt-0.5 flex items-center gap-1 text-xs font-semibold text-grey-600">
+                        <FiMapPin className="h-3.5 w-3.5 text-accent-dark" /> {t.city}
+                      </p>
+                      <p className="text-xs font-bold text-accent-dark mt-0.5">{t.classes}</p>
+                      <div className="mt-1.5 flex items-center gap-2">
+                        <StarRating rating={t.rating} size={15} />
+                        <span className="text-xs font-bold text-navy-950">5.0 Star Rated</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <p className="mt-4 text-sm leading-relaxed text-grey-600 font-medium">{t.highlight}</p>
+
+                  <div className="mt-4 flex flex-wrap gap-1.5">
+                    {t.subjects.map((s) => (
+                      <span
+                        key={s}
+                        className="rounded-lg bg-navy-50 px-2.5 py-1 text-xs font-bold text-navy-800"
+                      >
+                        {s}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="mt-5 grid grid-cols-2 gap-3 border-t border-grey-100 pt-4 text-sm">
+                    <div>
+                      <p className="font-display font-bold text-navy-900">{t.experience}+ Years</p>
+                      <p className="text-xs text-grey-500">Experience</p>
+                    </div>
+                    <div>
+                      <p className="font-display font-bold text-navy-900">{t.studentsTaught}+</p>
+                      <p className="text-xs text-grey-500">Students Taught</p>
+                    </div>
+                  </div>
+
+                  <p className="mt-4 rounded-xl bg-amber-500/10 border border-amber-400/30 px-3 py-2 text-center text-xs font-bold text-navy-950">
+                    Mode: {t.mode}
+                  </p>
+
+                  <div className="mt-5 grid grid-cols-2 gap-2">
+                    <Link href="/contact" className="btn-primary w-full text-xs py-2.5">
+                      Book Free Demo
+                    </Link>
+                    <a
+                      href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(`Hi! I would like to enquire about classes with ${t.name}.`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn inline-flex items-center justify-center gap-1 bg-emerald-600 text-white hover:bg-emerald-500 text-xs py-2.5"
+                    >
+                      <FaWhatsapp className="h-4 w-4" /> WhatsApp
+                    </a>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+
+          <div className="mt-8 text-center">
+            <Link href="/tutors" className="btn-outline inline-flex items-center gap-2">
+              View All Tutors &amp; Subject Experts <FiArrowRight />
+            </Link>
           </div>
         </div>
       </section>

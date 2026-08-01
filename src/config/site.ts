@@ -391,6 +391,20 @@ export const tutors: Tutor[] = [
       "Lead Maths Faculty & Founder Mentor. Known for making complex JEE & Board concepts intuitive and scoring.",
   },
   {
+    id: "riddhima-maam",
+    name: "Riddhima Ma'am",
+    image: "/images/faculty-riddhima.webp",
+    subjects: ["All Core Subjects (KG-10th)", "Science", "Maths", "English"],
+    city: "Greater Noida (Alpha 1)",
+    experience: 7,
+    classes: "KG – Class 10th",
+    rating: 5.0,
+    studentsTaught: 540,
+    mode: "Classroom · Home Tuition · Live Online",
+    highlight:
+      "7+ years experienced senior educator specializing in KG to 10th grade foundation, conceptual clarity, and personalized offline & online mentoring.",
+  },
+  {
     id: "priya-malhotra",
     name: "Priya Malhotra",
     subjects: ["Science", "Physics"],
