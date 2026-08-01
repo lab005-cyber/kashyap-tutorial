@@ -5,6 +5,11 @@ import { FiSend, FiLoader, FiCheckCircle, FiAlertCircle } from "react-icons/fi";
 
 type Status = "idle" | "loading" | "success" | "error";
 
+// Read from NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY or fallback to official key
+const ACCESS_KEY =
+  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ||
+  "6975c4b5-f8ba-4946-b461-6525c37c6a8c";
+
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
@@ -18,37 +23,30 @@ export default function ContactForm() {
     const form = e.currentTarget;
     const formData = new FormData(form);
     const name = (formData.get("name") as string).trim();
-    const phone = (formData.get("phone") as string).trim();
-    const email = (formData.get("email") as string).trim();
-    const standard = (formData.get("standard") as string) || "Not specified";
-    const interest = (formData.get("interest") as string) || "Not specified";
-    const message = (formData.get("message") as string).trim();
-    const botcheck = formData.get("botcheck") ? true : false;
+    setSubmittedName(name);
+
+    // Append Web3Forms metadata
+    formData.append("access_key", ACCESS_KEY);
+    formData.append("from_name", "Kashyap Tutorial Website");
+    formData.append("subject", `New Lead from ${name}`);
 
     try {
-      const res = await fetch("/api/contact", {
+      // Direct Web3Forms submission (no extra Vercel server route needed)
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name,
-          phone,
-          email,
-          standard,
-          interest,
-          message,
-          botcheck,
-        }),
+        body: formData,
       });
 
       const data = await res.json();
 
       if (data.success) {
-        setSubmittedName(name);
         setStatus("success");
         form.reset();
       } else {
         setStatus("error");
-        setErrorMsg(data.message || "Failed to send enquiry. Please try again.");
+        setErrorMsg(
+          data.message || "Failed to submit enquiry. Please try again."
+        );
       }
     } catch {
       setStatus("error");
@@ -73,10 +71,10 @@ export default function ContactForm() {
           <FiCheckCircle className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" />
           <div>
             <p className="font-bold text-base text-emerald-950">
-              Thank you {submittedName ? `, ${submittedName}` : ""}! Your enquiry has been sent to our team.
+              Thank you{submittedName ? `, ${submittedName}` : ""}! Your enquiry has been received.
             </p>
             <p className="mt-1 text-xs leading-relaxed text-emerald-800">
-              We have received your details. Er. N. Jha Sir &amp; Team will contact you via email or phone within 24 hours.
+              Er. N. Jha Sir &amp; Team will review your details and get in touch with you shortly.
             </p>
           </div>
         </div>
@@ -171,7 +169,7 @@ export default function ContactForm() {
       >
         {status === "loading" ? (
           <>
-            <FiLoader className="animate-spin h-5 w-5" /> Sending to Email...
+            <FiLoader className="animate-spin h-5 w-5" /> Submitting...
           </>
         ) : (
           <>
