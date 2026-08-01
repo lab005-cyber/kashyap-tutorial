@@ -7,8 +7,8 @@ import { FaWhatsapp } from "react-icons/fa";
 
 type Status = "idle" | "loading" | "success" | "error";
 
-// Default public Web3Forms access key fallback to ensure zero submission failures
-const FALLBACK_KEY = "b24d775c-7d92-4f3a-96e0-200a75f1f7d2";
+// Official Web3Forms access key
+const FALLBACK_KEY = "6975c4b5-f8ba-4946-b461-6525c37c6a8c";
 const ACCESS_KEY =
   process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY &&
   !process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.includes("YOUR_WEB3FORMS")
