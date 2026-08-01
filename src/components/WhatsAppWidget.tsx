@@ -22,7 +22,9 @@ export default function WhatsAppWidget() {
     <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-3">
       {showBubble && !dismissed && (
         <div className="flex max-w-[240px] items-start gap-2 rounded-2xl rounded-br-sm border border-grey-200 bg-white p-4 shadow-xl">
-          <span className="text-xl">👋</span>
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-emerald-100 text-emerald-600 font-bold">
+            <FaWhatsapp className="h-4 w-4" />
+          </span>
           <div>
             <p className="text-sm font-semibold text-navy-900">Need help?</p>
             <p className="mt-0.5 text-xs leading-relaxed text-grey-600">
