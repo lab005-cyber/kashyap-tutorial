@@ -4,7 +4,7 @@ import { getAllPosts, getAllTags } from "@/lib/blog";
 import { siteConfig } from "@/config/site";
 import JsonLd from "@/components/JsonLd";
 import { breadcrumbJsonLd } from "@/lib/seo";
-import { FiArrowRight, FiClock, FiCalendar } from "react-icons/fi";
+import { FiArrowRight, FiClock, FiCalendar, FiBookOpen } from "react-icons/fi";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -50,8 +50,8 @@ export default function BlogPage() {
               href={`/blog/${featured.slug}`}
               className="group mb-12 grid overflow-hidden rounded-3xl border border-grey-200 bg-white hover:shadow-lg md:grid-cols-2"
             >
-              <div className="flex min-h-[240px] items-center justify-center bg-navy-50 text-7xl">
-                {featured.coverEmoji}
+              <div className="flex min-h-[240px] items-center justify-center bg-navy-50 text-navy-700">
+                <FiBookOpen className="h-20 w-20 text-navy-700" />
               </div>
               <div className="p-8 sm:p-10">
                 <span className="rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent-dark">
@@ -99,8 +99,8 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="card group flex h-full flex-col hover:-translate-y-1 hover:border-navy-200 hover:shadow-md"
               >
-                <span className="flex h-32 items-center justify-center rounded-xl bg-navy-50 text-5xl">
-                  {post.coverEmoji}
+                <span className="flex h-32 items-center justify-center rounded-xl bg-navy-50 text-navy-700">
+                  <FiBookOpen className="h-12 w-12 text-navy-700" />
                 </span>
                 <div className="mt-4 flex items-center gap-3 text-xs text-grey-500">
                   <span className="inline-flex items-center gap-1.5">

@@ -27,7 +27,7 @@ export default function ResultsPage() {
         <div className="pointer-events-none absolute -left-24 -top-24 h-80 w-80 rounded-full bg-accent/15 blur-3xl" />
         <div className="container-x relative text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-accent">
-            🏆 Our Achievers
+            <FiAward className="h-4 w-4 text-accent" /> Our Achievers
           </span>
           <h1 className="mx-auto mt-5 max-w-3xl font-display text-4xl font-extrabold tracking-tight sm:text-5xl">
             Results that speak for themselves

@@ -6,6 +6,7 @@ import Reveal from "@/components/Reveal";
 import Testimonials from "@/components/Testimonials";
 import TutoringPresence from "@/components/TutoringPresence";
 import JsonLd from "@/components/JsonLd";
+import BrandIcon from "@/components/BrandIcon";
 import { faqJsonLd } from "@/lib/seo";
 import {
   FiArrowRight,
@@ -18,6 +19,7 @@ import {
   FiStar,
   FiCheck,
   FiBookOpen,
+  FiTarget,
 } from "react-icons/fi";
 import { FaWhatsapp, FaGlobe, FaGraduationCap } from "react-icons/fa";
 
@@ -319,7 +321,7 @@ export default function HomePage() {
               <div className="rounded-2xl border border-accent/40 bg-amber-500/10 p-6 transition-all hover:shadow-md">
                 <div className="flex items-center gap-3">
                   <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent text-navy-950 font-bold text-lg">
-                    🎯
+                    <FiTarget className="h-6 w-6 text-navy-950" />
                   </span>
                   <div>
                     <h3 className="font-display text-lg font-bold text-navy-900">
@@ -368,8 +370,8 @@ export default function HomePage() {
             {features.map((f, i) => (
               <Reveal key={f.title} delay={i * 70}>
                 <div className="card group h-full hover:-translate-y-1 hover:border-navy-300 hover:shadow-lg transition-all duration-300">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-navy-50 text-2xl transition-transform group-hover:scale-110 group-hover:bg-accent/20">
-                    {f.icon}
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-navy-50 text-navy-800 border border-navy-100/60 shadow-xs transition-transform group-hover:scale-110 group-hover:bg-accent/20">
+                    <BrandIcon name={f.icon} className="h-6 w-6 text-accent-dark" />
                   </span>
                   <h3 className="mt-4 font-display text-lg font-bold text-navy-900">
                     {f.title}
@@ -435,7 +437,9 @@ export default function HomePage() {
                   className="card group block h-full hover:-translate-y-1.5 hover:border-navy-300 hover:shadow-lg transition-all duration-300"
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-3xl">{course.icon}</span>
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-50 text-navy-800 border border-navy-100/60 shadow-xs">
+                      <BrandIcon name={course.icon} className="h-6 w-6 text-navy-800" />
+                    </span>
                     <span className="rounded-full bg-navy-50 px-3 py-1 text-xs font-semibold text-navy-700">
                       {course.level}
                     </span>
@@ -501,16 +505,18 @@ export default function HomePage() {
             <Reveal delay={120}>
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { p: "98.4%", n: "Aarav P.", c: "Class 10 CBSE", emoji: "🥇" },
-                  { p: "96.2%", n: "Diya S.", c: "Class 12 Science", emoji: "🥈" },
-                  { p: "95.8%", n: "Ishaan G.", c: "Class 10 ICSE", emoji: "🏆" },
-                  { p: "95.0%", n: "Sneha R.", c: "Class 12 Commerce", emoji: "⭐" },
+                  { p: "98.4%", n: "Aarav P.", c: "Class 10 CBSE", icon: "rank-1" },
+                  { p: "96.2%", n: "Diya S.", c: "Class 12 Science", icon: "rank-2" },
+                  { p: "95.8%", n: "Ishaan G.", c: "Class 10 ICSE", icon: "trophy" },
+                  { p: "95.0%", n: "Sneha R.", c: "Class 12 Commerce", icon: "star" },
                 ].map((t) => (
                   <div
                     key={t.n}
                     className="rounded-2xl bg-navy-900 p-5 text-white shadow-md border border-white/10"
                   >
-                    <span className="text-3xl">{t.emoji}</span>
+                    <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/10 text-amber-400">
+                      <BrandIcon name={t.icon} className="h-6 w-6" />
+                    </span>
                     <p className="mt-3 font-display text-2xl font-extrabold text-accent">
                       {t.p}
                     </p>
@@ -550,8 +556,8 @@ export default function HomePage() {
                     href={`/blog/${post.slug}`}
                     className="card group flex h-full flex-col hover:-translate-y-1 hover:border-navy-200 hover:shadow-md"
                   >
-                    <span className="flex h-32 items-center justify-center rounded-xl bg-navy-50 text-5xl">
-                      {post.coverEmoji}
+                    <span className="flex h-32 items-center justify-center rounded-xl bg-navy-50 text-navy-700">
+                      <FiBookOpen className="h-12 w-12 text-navy-700" />
                     </span>
                     <div className="mt-4 flex items-center gap-2 text-xs text-grey-500">
                       <span>{post.readingTime}</span>

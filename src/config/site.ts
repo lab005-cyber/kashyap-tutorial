@@ -84,7 +84,7 @@ export const courses: Course[] = [
     slug: "class-6-to-8",
     title: "Class 6 – 8 (Foundation)",
     level: "Middle School",
-    icon: "📘",
+    icon: "foundation",
     blurb:
       "Strong foundation for a bright future. Maths, Science, English & SST with 100% focus on concept clarity.",
     highlights: [
@@ -99,7 +99,7 @@ export const courses: Course[] = [
     slug: "class-9-10",
     title: "Class 9 – 10 (Board Excellence)",
     level: "Secondary",
-    icon: "📗",
+    icon: "board",
     blurb:
       "Board excellence with concept clarity. Complete NCERT mastery, sample paper drills and revision marathons.",
     highlights: [
@@ -114,7 +114,7 @@ export const courses: Course[] = [
     slug: "class-11-12-science",
     title: "Class 11 & 12 (CBSE / ICSE Boards)",
     level: "Senior Secondary",
-    icon: "🧪",
+    icon: "science",
     blurb:
       "Topper's preparation for Physics, Chemistry, Maths & Biology by subject experts led by Er. N. Jha Sir.",
     highlights: [
@@ -129,7 +129,7 @@ export const courses: Course[] = [
     slug: "jee-neet-cuet",
     title: "IIT-JEE | NEET | CUET Prep",
     level: "Competitive Entrance",
-    icon: "🏆",
+    icon: "target",
     blurb:
       "JEE Mains + Advanced, NEET (UG) and CUET preparation with smart strategies and proven results.",
     highlights: [
@@ -144,7 +144,7 @@ export const courses: Course[] = [
     slug: "home-tuition",
     title: "Home Tuition (KG to 12th)",
     level: "Personalised 1-on-1",
-    icon: "🏠",
+    icon: "home",
     blurb:
       "Quality education at your doorstep! Experienced & verified tutors with flexible timing and 1-on-1 focus.",
     highlights: [
@@ -159,7 +159,7 @@ export const courses: Course[] = [
     slug: "commerce-11-12",
     title: "Class 11 & 12 (Commerce)",
     level: "Senior Secondary",
-    icon: "📈",
+    icon: "chart",
     blurb:
       "Accountancy, Business Studies & Economics coaching with practical numerical practice and concept mastery.",
     highlights: [
@@ -175,32 +175,32 @@ export const courses: Course[] = [
 /* ----------------- WHY CHOOSE US ----------------- */
 export const features = [
   {
-    icon: "👨‍🏫",
+    icon: "faculty",
     title: "Expert Faculties",
     desc: "Led by Er. N. Jha Sir (Maths Faculty, Mentor, Guide, Motivator) & dedicated subject experts.",
   },
   {
-    icon: "👥",
+    icon: "users",
     title: "Small Batch Size",
     desc: "Limited students per batch to guarantee personal attention for every single learner.",
   },
   {
-    icon: "📊",
+    icon: "test",
     title: "Regular Tests & Analysis",
     desc: "Weekly chapter tests and performance reports shared directly with parents.",
   },
   {
-    icon: "🎯",
+    icon: "clarity",
     title: "100% Concept Clarity",
     desc: "Deep concept-first teaching from basics to brilliance, eliminating mugging up.",
   },
   {
-    icon: "🏠",
+    icon: "home",
     title: "Home Tuition (KG-12th)",
     desc: "Experienced tutors deliver personalized 1-on-1 education right at your doorstep.",
   },
   {
-    icon: "⭐",
+    icon: "star",
     title: "200+ 5-Star Reviews",
     desc: "Highest rated tutorial in Greater Noida trusted by hundreds of parents & students.",
   },
@@ -261,14 +261,14 @@ export const testimonials: Testimonial[] = [
 
 /* ----------------- RESULTS / Toppers ----------------- */
 export const toppers = [
-  { name: "Aarav Patel", class: "Class 10 CBSE", percentage: "98.4%", year: "2024" },
-  { name: "Diya Sharma", class: "Class 12 Science", percentage: "96.2%", year: "2024" },
-  { name: "Ishaan Gupta", class: "Class 10 ICSE", percentage: "95.8%", year: "2024" },
-  { name: "Sneha Rao", class: "Class 12 Commerce", percentage: "95.0%", year: "2024" },
-  { name: "Vivaan Kumar", class: "Class 10 CBSE", percentage: "94.6%", year: "2023" },
-  { name: "Ananya Reddy", class: "Class 12 Science", percentage: "94.2%", year: "2023" },
-  { name: "Aditya Nair", class: "Class 10 CBSE", percentage: "93.8%", year: "2023" },
-  { name: "Riya Jain", class: "Class 12 Commerce", percentage: "93.4%", year: "2023" },
+  { name: "Aarav Patel", class: "Class 10 CBSE", percentage: "98.4%", year: "2024", badge: "Top Rank 1" },
+  { name: "Diya Sharma", class: "Class 12 Science", percentage: "96.2%", year: "2024", badge: "Topper Rank 2" },
+  { name: "Ishaan Gupta", class: "Class 10 ICSE", percentage: "95.8%", year: "2024", badge: "Distinction" },
+  { name: "Sneha Rao", class: "Class 12 Commerce", percentage: "95.0%", year: "2024", badge: "Star Scorer" },
+  { name: "Vivaan Kumar", class: "Class 10 CBSE", percentage: "94.6%", year: "2023", badge: "Distinction" },
+  { name: "Ananya Reddy", class: "Class 12 Science", percentage: "94.2%", year: "2023", badge: "Distinction" },
+  { name: "Aditya Nair", class: "Class 10 CBSE", percentage: "93.8%", year: "2023", badge: "Star Scorer" },
+  { name: "Riya Jain", class: "Class 12 Commerce", percentage: "93.4%", year: "2023", badge: "Star Scorer" },
 ];
 
 /* ----------------- FAQ ----------------- */
@@ -311,7 +311,7 @@ export const offlineCities: TutorCity[] = [
   {
     name: "Greater Noida",
     state: "Uttar Pradesh",
-    icon: "📍",
+    icon: "pin",
     tagline: "Main Center & Headquarters — Alpha 1 Market",
     areas: ["Alpha 1 & 2, Beta 1 & 2", "Gamma, Delta, Sector Pi", "Knowledge Park, Gaur City", "Pari Chowk, Surajpur"],
     available: true,
@@ -321,7 +321,7 @@ export const offlineCities: TutorCity[] = [
   {
     name: "Ghaziabad",
     state: "Uttar Pradesh",
-    icon: "📍",
+    icon: "pin",
     tagline: "Serving students across major zones",
     areas: ["Vaishali, Indirapuram", "Kaushambi, Vasundhara", "Kavi Nagar, Raj Nagar", "Crossing Republik"],
     available: true,
@@ -331,7 +331,7 @@ export const offlineCities: TutorCity[] = [
   {
     name: "Gurgaon",
     state: "Haryana",
-    icon: "📍",
+    icon: "pin",
     tagline: "Premium home tuition in millennium city",
     areas: ["DLF Phase 1-5, Sushant Lok", "Sector 14-57, Golf Course Rd", "Sohna Road, MG Road", "Cyber City area"],
     available: true,
@@ -341,7 +341,7 @@ export const offlineCities: TutorCity[] = [
   {
     name: "Delhi",
     state: "Delhi NCR",
-    icon: "📍",
+    icon: "pin",
     tagline: "Covering South, East & West Delhi",
     areas: ["Dwarka, Rohini, Pitampura", "Saket, Vasant Kunj, Hauz Khas", "Laxmi Nagar, Preet Vihar", "Janakpuri"],
     available: true,
@@ -351,7 +351,7 @@ export const offlineCities: TutorCity[] = [
   {
     name: "Patna",
     state: "Bihar",
-    icon: "📍",
+    icon: "pin",
     tagline: "Quality home tuition & entrance coaching",
     areas: ["Kankarbagh, Boring Road", "Patliputra, Fraser Road", "Kumhrar, Gandhi Maidan", "Rajendra Nagar"],
     available: true,
@@ -460,12 +460,12 @@ export const onlineCoaching = {
     { time: "9:00 PM", label: "Late Night", zone: "IST" },
   ],
   features: [
-    { icon: "🖥️", title: "Live Interactive Classes", desc: "Real-time teaching with screen sharing, digital whiteboard & doubt clearing." },
-    { icon: "📅", title: "Flexible Scheduling", desc: "Pick time slots that fit your daily schedule — morning, afternoon, or evening batches." },
-    { icon: "📱", title: "Recorded Sessions", desc: "Class recordings available so students can revise topics anytime." },
-    { icon: "📊", title: "Digital Progress Reports", desc: "Weekly test reports shared digitally with parents via WhatsApp." },
-    { icon: "📝", title: "Smart Study Material", desc: "PDFs, practice sheets, formula handbooks, and revision notes." },
-    { icon: "🌍", title: "Global Access", desc: "Students worldwide can join for CBSE, ICSE, State Board, or entrance prep." },
+    { icon: "monitor", title: "Live Interactive Classes", desc: "Real-time teaching with screen sharing, digital whiteboard & doubt clearing." },
+    { icon: "calendar", title: "Flexible Scheduling", desc: "Pick time slots that fit your daily schedule — morning, afternoon, or evening batches." },
+    { icon: "video", title: "Recorded Sessions", desc: "Class recordings available so students can revise topics anytime." },
+    { icon: "test", title: "Digital Progress Reports", desc: "Weekly test reports shared digitally with parents via WhatsApp." },
+    { icon: "material", title: "Smart Study Material", desc: "PDFs, practice sheets, formula handbooks, and revision notes." },
+    { icon: "globe", title: "Global Access", desc: "Students worldwide can join for CBSE, ICSE, State Board, or entrance prep." },
   ],
 };
 

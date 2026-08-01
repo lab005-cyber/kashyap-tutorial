@@ -5,6 +5,7 @@ import Link from "next/link";
 import { offlineCities, onlineCoaching, siteConfig } from "@/config/site";
 import type { TutorCity } from "@/config/site";
 import Reveal from "@/components/Reveal";
+import BrandIcon from "@/components/BrandIcon";
 import {
   FiCheck,
   FiMapPin,
@@ -296,8 +297,8 @@ export default function TutoringPresence() {
                 <div className="pointer-events-none absolute -right-20 -top-20 h-72 w-72 rounded-full bg-accent/15 blur-3xl" />
                 <div className="pointer-events-none absolute -bottom-16 -left-16 h-60 w-60 rounded-full bg-navy-500/30 blur-3xl" />
                 <div className="relative flex flex-col items-center gap-6 text-center lg:flex-row lg:text-left">
-                  <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-4xl">
-                    🌍
+                  <span className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl bg-white/10 text-amber-400">
+                    <FaGlobe className="h-10 w-10 text-accent" />
                   </span>
                   <div>
                     <h3 className="font-display text-2xl font-extrabold sm:text-3xl">
@@ -365,8 +366,8 @@ export default function TutoringPresence() {
               {onlineCoaching.features.map((f, i) => (
                 <Reveal key={f.title} delay={i * 60}>
                   <div className="card group h-full hover:-translate-y-1 hover:border-navy-200 hover:shadow-md">
-                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-navy-50 text-2xl transition-transform group-hover:scale-110">
-                      {f.icon}
+                    <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-navy-50 text-navy-800 border border-navy-100/60 shadow-xs transition-transform group-hover:scale-110">
+                      <BrandIcon name={f.icon} className="h-6 w-6 text-navy-800" />
                     </span>
                     <h4 className="mt-4 font-display text-lg font-bold text-navy-900">
                       {f.title}

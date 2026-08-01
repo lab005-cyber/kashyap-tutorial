@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { courses, features, faqs } from "@/config/site";
 import Reveal from "@/components/Reveal";
 import JsonLd from "@/components/JsonLd";
+import BrandIcon from "@/components/BrandIcon";
 import { breadcrumbJsonLd, courseJsonLd } from "@/lib/seo";
 import { FiCheckCircle, FiArrowRight } from "react-icons/fi";
 
@@ -48,8 +49,8 @@ export default function CoursesPage() {
               <Reveal key={course.slug} delay={i * 60}>
                 <div className="card flex h-full flex-col hover:-translate-y-1 hover:border-navy-200 hover:shadow-md">
                   <div className="flex items-center justify-between">
-                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-navy-50 text-3xl">
-                      {course.icon}
+                    <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-navy-50 text-navy-800 border border-navy-100/60 shadow-xs">
+                      <BrandIcon name={course.icon} className="h-7 w-7 text-navy-800" />
                     </span>
                     <span className="rounded-full bg-accent/15 px-3 py-1 text-xs font-semibold text-accent-dark">
                       {course.level}
@@ -106,8 +107,8 @@ export default function CoursesPage() {
             {features.map((f, i) => (
               <Reveal key={f.title} delay={i * 70}>
                 <div className="card h-full">
-                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-navy-50 text-2xl">
-                    {f.icon}
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-navy-50 text-navy-800 border border-navy-100/60 shadow-xs">
+                    <BrandIcon name={f.icon} className="h-6 w-6 text-accent-dark" />
                   </span>
                   <h3 className="mt-4 font-display text-lg font-bold text-navy-900">
                     {f.title}

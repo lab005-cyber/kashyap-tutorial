@@ -11,6 +11,7 @@ import {
   FiCalendar,
   FiFacebook,
   FiLink,
+  FiBookOpen,
 } from "react-icons/fi";
 import CopyLinkButton from "@/components/CopyLinkButton";
 import JsonLd from "@/components/JsonLd";
@@ -99,7 +100,9 @@ export default function BlogPostPage({ params }: Props) {
           </Link>
 
           <div className="mx-auto mt-6 max-w-3xl text-center">
-            <div className="text-6xl">{post.coverEmoji}</div>
+            <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl bg-white/10 text-accent">
+              <FiBookOpen className="h-10 w-10 text-accent" />
+            </div>
             <div className="mt-5 flex flex-wrap items-center justify-center gap-4 text-xs text-grey-400">
               <span className="inline-flex items-center gap-1.5">
                 <FiCalendar /> {formatDate(post.date)}
@@ -182,8 +185,8 @@ export default function BlogPostPage({ params }: Props) {
                     href={`/blog/${p.slug}`}
                     className="card group flex gap-4 hover:border-navy-200 hover:shadow-md"
                   >
-                    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-navy-50 text-3xl">
-                      {p.coverEmoji}
+                    <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-xl bg-navy-50 text-navy-700">
+                      <FiBookOpen className="h-8 w-8 text-navy-700" />
                     </span>
                     <div>
                       <h4 className="font-semibold leading-snug text-navy-900 group-hover:text-navy-700">
