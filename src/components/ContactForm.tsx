@@ -133,7 +133,6 @@ export default function ContactForm() {
             <option>Class 11 (PCM / PCB)</option>
             <option>Class 12 (PCM / PCB)</option>
             <option>IIT-JEE / NEET / CUET</option>
-            <option>Home Tuition (KG-12th)</option>
           </select>
         </Field>
         <Field label="Interested In" htmlFor="interest">

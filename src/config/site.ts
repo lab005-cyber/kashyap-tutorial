@@ -33,8 +33,8 @@ export const siteConfig = {
       country: "India",
     },
     hours: [
-      { day: "Mon – Sat", time: "7:00 AM – 9:00 PM" },
-      { day: "Sunday", time: "8:00 AM – 2:00 PM (Doubt Sessions & Tests)" },
+      { day: "Mon – Sat", time: "9:00 AM – 10:00 PM" },
+      { day: "Sunday", time: "Closed" },
     ],
   },
 
