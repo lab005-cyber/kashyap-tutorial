@@ -40,21 +40,12 @@ export default function HomePage() {
             alt="Kashyap Tutorial Main Coaching Center Storefront in Alpha 1 Greater Noida"
             fill
             priority
-            className="object-cover object-center scale-105 filter blur-[0.5px] brightness-[0.85]"
+            className="object-cover object-center brightness-100"
           />
-          {/* Deep dark gradient overlay vignette for maximum contrast & luxury feel */}
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/85 to-navy-950/70" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/80" />
-          <div className="absolute -right-20 -top-20 h-[500px] w-[500px] rounded-full bg-accent/15 blur-[120px] pointer-events-none" />
-          {/* Subtle grid accent */}
-          <div
-            className="absolute inset-0 opacity-[0.03] pointer-events-none"
-            style={{
-              backgroundImage:
-                "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
-              backgroundSize: "40px 40px",
-            }}
-          />
+          {/* Subtle gradient vignette for text legibility while keeping storefront photo vibrant & clear */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/85 via-navy-950/60 to-navy-950/30" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/50" />
+          <div className="absolute -right-20 -top-20 h-[500px] w-[500px] rounded-full bg-accent/10 blur-[120px] pointer-events-none" />
         </div>
 
         <div className="container-x relative z-10 py-16 sm:py-20 lg:py-24">
