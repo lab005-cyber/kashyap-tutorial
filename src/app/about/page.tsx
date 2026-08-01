@@ -161,7 +161,7 @@ export default function AboutPage() {
         <div className="container-x">
           <div className="mx-auto max-w-2xl text-center">
             <span className="eyebrow">Core Philosophy</span>
-            <h2 className="heading mt-4">Why Parents Trust Kashyap Tutorial</h2>
+            <h2 className="heading mt-4">Why Parents Trust Kashyap Tutorial?</h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
             {values.map((v, i) => (
