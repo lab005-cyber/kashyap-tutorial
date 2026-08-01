@@ -345,7 +345,7 @@ export default function HomePage() {
                         <h3 className="font-display text-xl sm:text-2xl font-extrabold tracking-tight">
                           Class 11th &amp; 12th (Topper&apos;s Prep)
                         </h3>
-                        <p className="text-sm font-semibold text-royal-200 mt-1">
+                        <p className="text-sm font-semibold text-grey-300 mt-1">
                           Physics · Chemistry · Mathematics · Biology
                         </p>
                       </div>
@@ -353,14 +353,9 @@ export default function HomePage() {
 
                     {/* Subject pills */}
                     <div className="mt-5 flex flex-wrap gap-2">
-                      {[
-                        { label: "Physics", color: "bg-blue-500/20 text-blue-200 border-blue-400/30" },
-                        { label: "Chemistry", color: "bg-emerald-500/20 text-emerald-200 border-emerald-400/30" },
-                        { label: "Mathematics", color: "bg-amber-500/20 text-amber-200 border-amber-400/30" },
-                        { label: "Biology", color: "bg-pink-500/20 text-pink-200 border-pink-400/30" },
-                      ].map((s) => (
-                        <span key={s.label} className={`rounded-lg border px-3 py-1.5 text-xs font-bold backdrop-blur-sm ${s.color}`}>
-                          {s.label}
+                      {["Physics", "Chemistry", "Mathematics", "Biology"].map((label) => (
+                        <span key={label} className="rounded-lg bg-white/10 text-grey-200 border border-white/15 px-3 py-1 text-xs font-semibold backdrop-blur-sm">
+                          {label}
                         </span>
                       ))}
                     </div>
@@ -373,7 +368,7 @@ export default function HomePage() {
                         "Previous Year Drills",
                         "Personal Mentoring & Doubts",
                       ].map((feat) => (
-                        <span key={feat} className="flex items-start gap-2 text-xs text-royal-100">
+                        <span key={feat} className="flex items-start gap-2 text-xs text-grey-200">
                           <FiCheck className="mt-0.5 h-3.5 w-3.5 shrink-0 text-amber-400" /> {feat}
                         </span>
                       ))}
@@ -381,7 +376,7 @@ export default function HomePage() {
 
                     {/* CTA row */}
                     <div className="mt-6 flex flex-wrap items-center gap-3">
-                      <Link href="/contact" className="inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 px-5 py-2.5 text-sm font-bold text-navy-950 shadow-lg shadow-amber-500/25 transition-all hover:shadow-xl hover:shadow-amber-500/30 hover:scale-[1.02]">
+                      <Link href="/contact" className="btn-accent px-5 py-2.5 text-sm">
                         Enquire Now <FiArrowRight className="h-4 w-4" />
                       </Link>
                       <a
@@ -399,17 +394,16 @@ export default function HomePage() {
 
               {/* ---- JEE / NEET / CUET Card ---- */}
               <Reveal delay={240}>
-                <div className="group relative overflow-hidden rounded-2xl border border-amber-200/60 bg-gradient-to-r from-amber-50 via-orange-50/50 to-amber-50/30 p-5 transition-all duration-300 hover:border-amber-300 hover:shadow-lg hover:-translate-y-0.5">
-                  <div className="absolute -right-10 -top-10 h-24 w-24 rounded-full bg-amber-100/60 blur-2xl transition-all group-hover:bg-amber-200/70" />
+                <div className="group relative overflow-hidden rounded-2xl border border-grey-200 bg-white p-5 transition-all duration-300 hover:border-navy-900/30 hover:shadow-lg hover:-translate-y-0.5">
                   <div className="relative flex items-start gap-4">
-                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-lg shadow-amber-500/20">
+                    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-navy-900 text-amber-400 shadow-md">
                       <FiTarget className="h-6 w-6" />
                     </span>
                     <div className="flex-1">
                       <h3 className="font-display text-lg font-bold text-navy-900">
                         IIT-JEE | NEET (UG) | CUET &amp; Competitive
                       </h3>
-                      <p className="text-xs font-semibold text-amber-700 mt-0.5">Engineering &amp; Medical Entrance</p>
+                      <p className="text-xs font-bold text-accent-dark mt-0.5">Engineering &amp; Medical Entrance</p>
                       <p className="mt-2 text-sm text-grey-600 leading-relaxed">
                         Expert faculty, smart entrance techniques, formula shortcuts, regular mock test analytics, and personal guidance.
                       </p>
@@ -513,116 +507,42 @@ export default function HomePage() {
           </div>
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {courses.slice(0, 6).map((course, i) => {
-              // Per-course color themes
-              const themes: Record<string, { gradient: string; iconBg: string; iconText: string; border: string; badge: string; badgeText: string; check: string; accent: string; stripe: string }> = {
-                "class-6-to-8": {
-                  gradient: "from-navy-50/80 to-white",
-                  iconBg: "bg-gradient-to-br from-navy-700 to-navy-900",
-                  iconText: "text-white",
-                  border: "hover:border-navy-300",
-                  badge: "bg-navy-50",
-                  badgeText: "text-navy-700",
-                  check: "text-navy-600",
-                  accent: "text-navy-800 group-hover:text-navy-600",
-                  stripe: "from-navy-600 via-navy-800 to-navy-600",
-                },
-                "class-9-10": {
-                  gradient: "from-emerald-50/60 to-white",
-                  iconBg: "bg-gradient-to-br from-emerald-500 to-emerald-700",
-                  iconText: "text-white",
-                  border: "hover:border-emerald-300",
-                  badge: "bg-emerald-50",
-                  badgeText: "text-emerald-700",
-                  check: "text-emerald-600",
-                  accent: "text-emerald-700 group-hover:text-emerald-600",
-                  stripe: "from-emerald-500 via-emerald-600 to-emerald-500",
-                },
-                "class-11-12-science": {
-                  gradient: "from-royal-50/80 to-white",
-                  iconBg: "bg-gradient-to-br from-royal-600 to-indigo-700",
-                  iconText: "text-white",
-                  border: "hover:border-royal-300",
-                  badge: "bg-royal-50",
-                  badgeText: "text-royal-700",
-                  check: "text-royal-600",
-                  accent: "text-royal-700 group-hover:text-royal-500",
-                  stripe: "from-royal-500 via-royal-700 to-indigo-600",
-                },
-                "jee-neet-cuet": {
-                  gradient: "from-amber-50/60 to-white",
-                  iconBg: "bg-gradient-to-br from-amber-500 to-orange-600",
-                  iconText: "text-white",
-                  border: "hover:border-amber-300",
-                  badge: "bg-amber-50",
-                  badgeText: "text-amber-700",
-                  check: "text-amber-600",
-                  accent: "text-amber-700 group-hover:text-amber-600",
-                  stripe: "from-amber-400 via-orange-500 to-amber-400",
-                },
-                "home-tuition": {
-                  gradient: "from-sky-50/60 to-white",
-                  iconBg: "bg-gradient-to-br from-sky-500 to-blue-600",
-                  iconText: "text-white",
-                  border: "hover:border-sky-300",
-                  badge: "bg-sky-50",
-                  badgeText: "text-sky-700",
-                  check: "text-sky-600",
-                  accent: "text-sky-700 group-hover:text-sky-600",
-                  stripe: "from-sky-400 via-blue-500 to-sky-400",
-                },
-                "pcb-11-12": {
-                  gradient: "from-pink-50/60 to-white",
-                  iconBg: "bg-gradient-to-br from-pink-500 to-rose-600",
-                  iconText: "text-white",
-                  border: "hover:border-pink-300",
-                  badge: "bg-pink-50",
-                  badgeText: "text-pink-700",
-                  check: "text-pink-600",
-                  accent: "text-pink-700 group-hover:text-pink-500",
-                  stripe: "from-pink-400 via-rose-500 to-pink-400",
-                },
-              };
-              const t = themes[course.slug] || themes["class-6-to-8"];
-              const is1112 = course.slug === "class-11-12-science" || course.slug === "pcb-11-12";
+            {courses.slice(0, 6).map((course, i) => (
+              <Reveal key={course.slug} delay={i * 60}>
+                <Link
+                  href="/courses"
+                  className="group relative block h-full overflow-hidden rounded-2xl border border-grey-200 bg-white p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:border-navy-900/30 hover:shadow-xl"
+                >
+                  {/* Top gold accent stripe */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-accent" />
 
-              return (
-                <Reveal key={course.slug} delay={i * 60}>
-                  <Link
-                    href="/courses"
-                    className={`group relative block h-full overflow-hidden rounded-2xl border bg-gradient-to-b ${t.gradient} p-6 shadow-sm transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${t.border} ${is1112 ? "border-royal-200/60 ring-1 ring-royal-100/50" : "border-grey-200"}`}
-                  >
-                    {/* Top gradient stripe */}
-                    <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${t.stripe}`} />
-
-                    <div className="flex items-center justify-between">
-                      <span className={`flex h-12 w-12 items-center justify-center rounded-xl ${t.iconBg} ${t.iconText} shadow-lg`}>
-                        <BrandIcon name={course.icon} className="h-6 w-6" />
-                      </span>
-                      <span className={`rounded-full ${t.badge} px-3 py-1 text-xs font-semibold ${t.badgeText}`}>
-                        {course.level}
-                      </span>
-                    </div>
-                    <h3 className="mt-4 font-display text-lg font-bold text-navy-900 group-hover:text-navy-700">
-                      {course.title}
-                    </h3>
-                    <p className="mt-2 text-sm text-grey-600 leading-relaxed">{course.blurb}</p>
-
-                    <ul className="mt-4 space-y-1.5 text-xs text-grey-600 border-t border-grey-100 pt-3">
-                      {course.highlights.map((h) => (
-                        <li key={h} className="flex items-center gap-2">
-                          <FiCheck className={`${t.check} shrink-0`} /> {h}
-                        </li>
-                      ))}
-                    </ul>
-
-                    <span className={`mt-4 inline-flex items-center gap-1.5 text-sm font-semibold ${t.accent}`}>
-                      Explore course <FiArrowRight className="transition-transform group-hover:translate-x-1" />
+                  <div className="flex items-center justify-between">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-navy-900 text-amber-400 shadow-md">
+                      <BrandIcon name={course.icon} className="h-6 w-6" />
                     </span>
-                  </Link>
-                </Reveal>
-              );
-            })}
+                    <span className="rounded-full bg-navy-50 border border-navy-100 px-3 py-1 text-xs font-bold text-navy-800">
+                      {course.level}
+                    </span>
+                  </div>
+                  <h3 className="mt-4 font-display text-lg font-bold text-navy-900 group-hover:text-navy-700 transition-colors">
+                    {course.title}
+                  </h3>
+                  <p className="mt-2 text-sm text-grey-600 leading-relaxed">{course.blurb}</p>
+
+                  <ul className="mt-4 space-y-1.5 text-xs text-grey-600 border-t border-grey-100 pt-3">
+                    {course.highlights.map((h) => (
+                      <li key={h} className="flex items-center gap-2">
+                        <FiCheck className="text-accent-dark shrink-0 font-bold" /> {h}
+                      </li>
+                    ))}
+                  </ul>
+
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-bold text-navy-900 group-hover:text-accent-dark transition-colors">
+                    Explore course <FiArrowRight className="transition-transform group-hover:translate-x-1" />
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
