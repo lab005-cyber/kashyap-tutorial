@@ -1,16 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 type LogoProps = {
   className?: string;
   showText?: boolean;
-  /** color of the monogram mark stroke */
+  /** color of the monogram mark text */
   variant?: "default" | "light";
 };
 
 /**
- * Minimalist logo: an open-book / "K" monogram inside a rounded navy tile.
- * Conveys knowledge + the brand initial. Uses brand palette only.
+ * Official Kashyap Tutorial Logo: Circular 3D Emblem Badge with brand typography.
  */
 export default function Logo({
   className = "",
@@ -24,40 +24,24 @@ export default function Logo({
     <Link
       href="/"
       aria-label={`${siteConfig.name} home`}
-      className={`group inline-flex items-center gap-2.5 ${className}`}
+      className={`group inline-flex items-center gap-3 ${className}`}
     >
-      <span className="relative inline-flex h-10 w-10 items-center justify-center rounded-xl bg-navy-800 shadow-sm transition-transform duration-300 group-hover:scale-105">
-        <svg
-          viewBox="0 0 48 48"
-          className="h-7 w-7"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-        >
-          {/* open book base */}
-          <path
-            d="M24 13c-3-2.2-7-3-11-2.6-1 .1-1.7.9-1.7 1.9v16.2c0 1.1.9 2 2 1.9 3.4-.3 7 .4 10.7 2.7 3.7-2.3 7.3-3 10.7-2.7 1.1.1 2-.8 2-1.9V12.3c0-1-.7-1.8-1.7-1.9-4-.4-8 .4-11 2.6Z"
-            fill="#ffffff"
-            opacity="0.18"
-          />
-          {/* K monogram */}
-          <path
-            d="M19 14v20M19 24l8-10M19 24l8 10"
-            stroke="#ffffff"
-            strokeWidth="2.6"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          {/* graduation accent dot */}
-          <circle cx="33" cy="15" r="2.4" fill="#f0b429" />
-        </svg>
+      <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full p-0.5 bg-gradient-to-tr from-accent via-blue-500 to-navy-800 shadow-md transition-transform duration-300 group-hover:scale-105">
+        <Image
+          src="/images/logo-original.jpg"
+          alt="Kashyap Tutorial Logo"
+          width={44}
+          height={44}
+          priority
+          className="h-full w-full rounded-full object-cover"
+        />
       </span>
       {showText && (
-        <span className="flex flex-col leading-none">
-          <span className={`font-display text-base font-bold tracking-tight ${textColor}`}>
-            Kashyap Tutorial
+        <span className="flex flex-col leading-tight">
+          <span className={`font-display text-base font-extrabold tracking-tight ${textColor}`}>
+            KASHYAP TUTORIAL
           </span>
-          <span className={`text-[11px] font-medium tracking-wide ${subColor}`}>
+          <span className={`text-[11px] font-semibold tracking-wide uppercase ${subColor}`}>
             &amp; Home Tuition
           </span>
         </span>
@@ -65,3 +49,4 @@ export default function Logo({
     </Link>
   );
 }
+

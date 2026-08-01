@@ -11,32 +11,30 @@
 export const siteConfig = {
   name: "Kashyap Tutorial & Home Tuition",
   shortName: "Kashyap Tutorial",
-  tagline: "Offline Tutors in 5 Cities · Online Classes Worldwide",
+  tagline: "Building Strong Concepts · Shaping Bright Futures | Er. N. Jha Sir & Teams",
   // Used for SEO canonical URLs & sitemap. Set NEXT_PUBLIC_SITE_URL in env.
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   description:
-    "Kashyap Tutorial & Home Tuition offers personalised home tuition in Greater Noida, Ghaziabad, Gurgaon, Delhi & Patna, plus live online classes worldwide. Expert faculty, small batches, and proven results for Classes 6–12, CBSE/ICSE.",
-  ogImage: "/og-image.svg",
+    "Kashyap Tutorial & Home Tuition in Alpha 1, Greater Noida. Expert Coaching & Home Tuitions by Er. N. Jha Sir & Teams for Class 6–12 (CBSE & ICSE), IIT-JEE, NEET, CUET. Quality Education at Your Doorstep!",
+  ogImage: "/images/poster-courses.jpg",
 
   /* ----------------- CONTACT DETAILS ----------------- */
-  // >>> EDIT THESE with your real details <<<
   contact: {
-    phone: "+91 98765 43210",
-    phoneHref: "+919876543210", // no spaces, for tel: links
-    whatsapp: "919876543210",
-    email: "info@kashyaptutorial.com",
+    phone: "+91 7903244838",
+    phoneHref: "+917903244838", // no spaces, for tel: links
+    whatsapp: "917903244838",
+    email: "kashyaptutorial@gmail.com",
     address: {
-      line1: "Main Market Road",
-      line2: "Near Civil Hospital",
-      city: "Ghaziabad",
+      line1: "Alpha 1",
+      line2: "Near Alpha 1 Market",
+      city: "Greater Noida",
       state: "Uttar Pradesh",
-      pincode: "201001",
+      pincode: "201310",
       country: "India",
     },
     hours: [
-      { day: "Mon – Fri", time: "7:00 AM – 8:00 PM" },
-      { day: "Saturday", time: "8:00 AM – 6:00 PM" },
-      { day: "Sunday", time: "Closed (Home visits by appt.)" },
+      { day: "Mon – Sat", time: "7:00 AM – 9:00 PM" },
+      { day: "Sunday", time: "8:00 AM – 2:00 PM (Doubt Sessions & Tests)" },
     ],
   },
 
@@ -51,10 +49,10 @@ export const siteConfig = {
 
   /* ----------------- KEY METRICS (Hero) ----------------- */
   metrics: [
-    { value: "1500+", label: "Students Taught" },
-    { value: "95%", label: "Pass Percentage" },
-    { value: "12+", label: "Years of Teaching" },
-    { value: "4.9★", label: "Parent Rating" },
+    { value: "200+", label: "5-Star Google Reviews" },
+    { value: "100%", label: "Concept Clarity Focus" },
+    { value: "12+", label: "Years of Excellence" },
+    { value: "1500+", label: "Students Guided" },
   ],
 
   /* ----------------- NAVIGATION ----------------- */
@@ -84,48 +82,78 @@ export type Course = {
 export const courses: Course[] = [
   {
     slug: "class-6-to-8",
-    title: "Foundation Classes (6–8)",
+    title: "Class 6 – 8 (Foundation)",
     level: "Middle School",
     icon: "📘",
     blurb:
-      "Strong conceptual base in Maths, Science, English & SST with activity-based learning.",
+      "Strong foundation for a bright future. Maths, Science, English & SST with 100% focus on concept clarity.",
     highlights: [
-      "CBSE & ICSE syllabus",
-      "Weekly tests & progress reports",
-      "Spoken English & grammar focus",
+      "CBSE & ICSE (All Subjects)",
+      "Strong foundation building",
+      "Regular tests & progress reports",
       "Doubt-clearing sessions",
     ],
     fee: "Affordable monthly",
   },
   {
     slug: "class-9-10",
-    title: "Class 9 & 10 (Board Mastery)",
+    title: "Class 9 – 10 (Board Excellence)",
     level: "Secondary",
     icon: "📗",
     blurb:
-      "Targeted board exam preparation with NCERT mastery, sample papers and revision marathons.",
+      "Board excellence with concept clarity. Complete NCERT mastery, sample paper drills and revision marathons.",
     highlights: [
-      "Complete NCERT coverage",
+      "CBSE & ICSE Boards",
       "Chapter-wise test series",
       "Board pattern mock exams",
-      "Practical / internal-assessment help",
+      "Small batch size attention",
     ],
     fee: "Flexible plans",
   },
   {
     slug: "class-11-12-science",
-    title: "Class 11 & 12 (Science – PCM/PCB)",
+    title: "Class 11 & 12 (CBSE / ICSE Boards)",
     level: "Senior Secondary",
     icon: "🧪",
     blurb:
-      "Physics, Chemistry, Maths & Biology by subject experts with board + entrance focus.",
+      "Topper's preparation for Physics, Chemistry, Maths & Biology by subject experts led by Er. N. Jha Sir.",
     highlights: [
-      "Experienced faculty per subject",
+      "Expert subject faculty",
       "Concept + numerical practice",
       "Previous year question drills",
-      "Personal mentoring",
+      "Personal mentoring & doubt sessions",
     ],
     fee: "Subject-wise or full",
+  },
+  {
+    slug: "jee-neet-cuet",
+    title: "IIT-JEE | NEET | CUET Prep",
+    level: "Competitive Entrance",
+    icon: "🏆",
+    blurb:
+      "JEE Mains + Advanced, NEET (UG) and CUET preparation with smart strategies and proven results.",
+    highlights: [
+      "Smart entrance strategies",
+      "Speed & accuracy training",
+      "Regular mock test analysis",
+      "Formula & trick workshops",
+    ],
+    fee: "Course-wise",
+  },
+  {
+    slug: "home-tuition",
+    title: "Home Tuition (KG to 12th)",
+    level: "Personalised 1-on-1",
+    icon: "🏠",
+    blurb:
+      "Quality education at your doorstep! Experienced & verified tutors with flexible timing and 1-on-1 focus.",
+    highlights: [
+      "All subjects (KG to 12th)",
+      "Experienced & verified tutors",
+      "Personalised attention",
+      "Flexible timing & parent updates",
+    ],
+    fee: "Per visit / monthly",
   },
   {
     slug: "commerce-11-12",
@@ -133,7 +161,7 @@ export const courses: Course[] = [
     level: "Senior Secondary",
     icon: "📈",
     blurb:
-      "Accountancy, Business Studies & Economics coaching with real-world case studies.",
+      "Accountancy, Business Studies & Economics coaching with practical numerical practice and concept mastery.",
     highlights: [
       "Accounts problem-solving",
       "BST & Eco concept clarity",
@@ -142,69 +170,39 @@ export const courses: Course[] = [
     ],
     fee: "Flexible plans",
   },
-  {
-    slug: "competitive-exams",
-    title: "Competitive Exam Prep",
-    level: "Foundation / Olympiad",
-    icon: "🏆",
-    blurb:
-      "NTSE, Olympiads, NDA and scholarship exam preparation with shortcut techniques.",
-    highlights: [
-      "NTSE & Olympiad focus",
-      "Speed & accuracy training",
-      "Reasoning & aptitude",
-      "Mock test analysis",
-    ],
-    fee: "Course-wise",
-  },
-  {
-    slug: "home-tuition",
-    title: "Home Tuition (1-on-1)",
-    level: "All Classes",
-    icon: "🏠",
-    blurb:
-      "Personalised home tuition at your doorstep with dedicated individual attention.",
-    highlights: [
-      "Tutor visits your home",
-      "All subjects & classes",
-      "Flexible timings",
-      "Direct parent–tutor updates",
-    ],
-    fee: "Per visit / monthly",
-  },
 ];
 
 /* ----------------- WHY CHOOSE US ----------------- */
 export const features = [
   {
     icon: "👨‍🏫",
-    title: "Experienced Faculty",
-    desc: "Qualified teachers with 10+ years of subject expertise who care about each student.",
+    title: "Expert Faculties",
+    desc: "Led by Er. N. Jha Sir (Maths Faculty, Mentor, Guide, Motivator) & dedicated subject experts.",
   },
   {
     icon: "👥",
     title: "Small Batch Size",
-    desc: "Limited students per batch ensures personal attention for every learner.",
+    desc: "Limited students per batch to guarantee personal attention for every single learner.",
   },
   {
     icon: "📊",
-    title: "Regular Tests & Reports",
-    desc: "Weekly tests with detailed performance reports shared directly with parents.",
+    title: "Regular Tests & Analysis",
+    desc: "Weekly chapter tests and performance reports shared directly with parents.",
+  },
+  {
+    icon: "🎯",
+    title: "100% Concept Clarity",
+    desc: "Deep concept-first teaching from basics to brilliance, eliminating mugging up.",
   },
   {
     icon: "🏠",
-    title: "Home Tuition Option",
-    desc: "Can't travel? Get the same quality teaching at your doorstep, 1-on-1.",
+    title: "Home Tuition (KG-12th)",
+    desc: "Experienced tutors deliver personalized 1-on-1 education right at your doorstep.",
   },
   {
-    icon: "📚",
-    title: "Complete Study Material",
-    desc: "Curated notes, worksheets and previous papers included — no hidden costs.",
-  },
-  {
-    icon: "💡",
-    title: "Concept-First Teaching",
-    desc: "We build deep understanding, not rote memorisation, for long-term success.",
+    icon: "⭐",
+    title: "200+ 5-Star Reviews",
+    desc: "Highest rated tutorial in Greater Noida trusted by hundreds of parents & students.",
   },
 ];
 
@@ -218,45 +216,45 @@ export type Testimonial = {
 
 export const testimonials: Testimonial[] = [
   {
-    name: "Anjali Sharma",
-    role: "Parent (Class 10)",
+    name: "Aarav Sharma",
+    role: "Parent (Class 10, Greater Noida)",
     quote:
-      "My daughter's confidence in Maths improved drastically. The regular test reports kept me involved throughout. Highly recommended!",
+      "Er. N. Jha Sir's approach to Maths is extraordinary. My son scored 96% in Class 10 boards and lost all fear of Mathematics!",
     rating: 5,
   },
   {
-    name: "Rahul Verma",
-    role: "Student (Class 12 Science)",
+    name: "Priyanshu Verma",
+    role: "Student (Class 12 JEE Batch)",
     quote:
-      "The Physics teacher made the toughest concepts feel easy. I scored 94% in boards thanks to their guidance.",
+      "The concept clarity and numerical shortcuts taught at Kashyap Tutorial helped me crack JEE Mains. Best coaching in Alpha 1!",
     rating: 5,
   },
   {
-    name: "Sunita Gupta",
+    name: "Sunita Devi",
     role: "Parent (Home Tuition)",
     quote:
-      "The home tuition service is excellent. The tutor is punctual, patient and my son actually enjoys studying now.",
+      "The home tutor provided by Kashyap Tutorial is punctual, polite, and extremely qualified. My daughter's grades jumped from 70% to 92%.",
     rating: 5,
   },
   {
-    name: "Mohit Singh",
-    role: "Student (Class 9)",
+    name: "Rohan Gupta",
+    role: "Student (Class 9 CBSE)",
     quote:
-      "Small batches mean the sir knows exactly where I'm struggling. My Science marks jumped from 60s to 90s!",
+      "Small batch size means I can ask any doubt without hesitation. Doubts are cleared on the spot with real-life examples.",
     rating: 5,
   },
   {
-    name: "Priya Mishra",
-    role: "Parent (Class 11 Commerce)",
+    name: "Meenakshi Singh",
+    role: "Parent (Class 11 Science)",
     quote:
-      "Accounts coaching here is outstanding. The case-study approach really helped my daughter prepare for boards.",
+      "Regular tests and performance reports keep us completely updated. The faculty is genuinely invested in every child's success.",
     rating: 5,
   },
   {
-    name: "Karan Joshi",
-    role: "Student (Class 12 PCB)",
+    name: "Aditya Raj",
+    role: "Student (NEET Aspirant)",
     quote:
-      "Personal mentoring and doubt sessions made all the difference for my NEET preparation alongside boards.",
+      "Biology and Chemistry lectures here are super structured. Chapter-wise tests and smart study materials made all the difference.",
     rating: 5,
   },
 ];
@@ -276,24 +274,24 @@ export const toppers = [
 /* ----------------- FAQ ----------------- */
 export const faqs = [
   {
-    q: "Do you offer home tuition across the whole city?",
-    a: "Yes. We provide home tuition across the city and nearby areas. Contact us with your locality and we'll match you with an available tutor.",
+    q: "Where is Kashyap Tutorial located?",
+    a: "We are located at Alpha 1, Greater Noida (Near Alpha 1 Market). We offer classroom coaching at our center as well as Home Tuitions across Greater Noida, Ghaziabad, Gurgaon, Delhi & Patna.",
+  },
+  {
+    q: "Who leads the faculty at Kashyap Tutorial?",
+    a: "Our core faculty is led by Er. N. Jha Sir (Maths Faculty, Mentor, Guide, Motivator) along with a team of experienced subject experts for Physics, Chemistry, Biology, Commerce & Foundation subjects.",
+  },
+  {
+    q: "Do you provide Home Tuition for all classes?",
+    a: "Yes! We provide 1-on-1 Home Tuitions from KG to Class 12th for all subjects across CBSE, ICSE, and State Boards with experienced & verified tutors.",
   },
   {
     q: "What is the batch size in classroom coaching?",
-    a: "We keep batches small — typically 12 to 20 students — so every learner gets personal attention from the teacher.",
+    a: "We strictly maintain small batch sizes so that Er. N. Jha Sir and our faculty can give personalized attention to every student.",
   },
   {
-    q: "Are study materials included in the fees?",
-    a: "Yes. Curated notes, worksheets and previous year question papers are included. There are no hidden charges.",
-  },
-  {
-    q: "How will I track my child's progress?",
-    a: "We conduct weekly tests and share detailed performance reports with parents, plus regular meetings on request.",
-  },
-  {
-    q: "Can I take a free demo class before joining?",
-    a: "Absolutely. Book a free demo through our Contact page and experience our teaching style before enrolling.",
+    q: "How can I book a Free Demo Class?",
+    a: "You can call or WhatsApp us directly at +91 7903244838 or submit the demo request form on our website.",
   },
 ];
 
@@ -314,20 +312,20 @@ export const offlineCities: TutorCity[] = [
     name: "Greater Noida",
     state: "Uttar Pradesh",
     icon: "📍",
-    tagline: "Our headquarters — where it all started",
-    areas: ["Alpha, Beta, Gamma, Delta", "Sector Pi, Sigma, Omega", "Knowledge Park, Gaur City", "Pari Chowk, Surajpur"],
+    tagline: "Main Center & Headquarters — Alpha 1 Market",
+    areas: ["Alpha 1 & 2, Beta 1 & 2", "Gamma, Delta, Sector Pi", "Knowledge Park, Gaur City", "Pari Chowk, Surajpur"],
     available: true,
-    tutorCount: 24,
+    tutorCount: 30,
     since: 2012,
   },
   {
     name: "Ghaziabad",
     state: "Uttar Pradesh",
     icon: "📍",
-    tagline: "Serving students across all major zones",
-    areas: ["Vaishali, Indirapuram, Vaibhav Khand", "Kaushambi, Vasundhara", "Kavi Nagar, Raj Nagar", "Crossing Republik, NH-24"],
+    tagline: "Serving students across major zones",
+    areas: ["Vaishali, Indirapuram", "Kaushambi, Vasundhara", "Kavi Nagar, Raj Nagar", "Crossing Republik"],
     available: true,
-    tutorCount: 18,
+    tutorCount: 20,
     since: 2014,
   },
   {
@@ -335,29 +333,29 @@ export const offlineCities: TutorCity[] = [
     state: "Haryana",
     icon: "📍",
     tagline: "Premium home tuition in millennium city",
-    areas: ["DLF Phase 1-5, Sushant Lok", "Sector 14-57, Golf Course Road", "Sohna Road, MG Road", "Cyber City, Udyog Vihar"],
+    areas: ["DLF Phase 1-5, Sushant Lok", "Sector 14-57, Golf Course Rd", "Sohna Road, MG Road", "Cyber City area"],
     available: true,
-    tutorCount: 15,
+    tutorCount: 18,
     since: 2016,
   },
   {
     name: "Delhi",
     state: "Delhi NCR",
     icon: "📍",
-    tagline: "Covering North, South, East & West Delhi",
-    areas: ["Dwarka, Rohini, Pitampura", "Saket, Vasant Kunj, Hauz Khas", "Laxmi Nagar, Preet Vihar", "Janakpuri, Rajouri Garden"],
+    tagline: "Covering South, East & West Delhi",
+    areas: ["Dwarka, Rohini, Pitampura", "Saket, Vasant Kunj, Hauz Khas", "Laxmi Nagar, Preet Vihar", "Janakpuri"],
     available: true,
-    tutorCount: 21,
+    tutorCount: 25,
     since: 2015,
   },
   {
     name: "Patna",
     state: "Bihar",
     icon: "📍",
-    tagline: "Expanding quality coaching to Bihar",
-    areas: ["Kankarbagh, Boring Road", "Patliputra, Fraser Road", "Kumhrar, Gandhi Maidan", "Rajendra Nagar, Boring Canal Rd"],
+    tagline: "Quality home tuition & entrance coaching",
+    areas: ["Kankarbagh, Boring Road", "Patliputra, Fraser Road", "Kumhrar, Gandhi Maidan", "Rajendra Nagar"],
     available: true,
-    tutorCount: 12,
+    tutorCount: 15,
     since: 2018,
   },
 ];
@@ -366,6 +364,7 @@ export const offlineCities: TutorCity[] = [
 export type Tutor = {
   id: string;
   name: string;
+  image?: string;
   subjects: string[];
   city: string;
   experience: number; // years
@@ -378,132 +377,81 @@ export type Tutor = {
 
 export const tutors: Tutor[] = [
   {
-    id: "rahul-kashyap",
-    name: "Rahul Kashyap",
-    subjects: ["Physics", "Chemistry", "Maths"],
-    city: "Greater Noida",
+    id: "n-jha-sir",
+    name: "Er. N. Jha Sir",
+    image: "/images/faculty-njha.jpg",
+    subjects: ["Mathematics", "IIT-JEE Maths", "Class 9-12 Maths"],
+    city: "Greater Noida (Alpha 1)",
     experience: 12,
-    classes: "Class 9 – 12",
-    rating: 4.9,
-    studentsTaught: 850,
-    mode: "Classroom · Home · Online",
+    classes: "Class 8 – 12 & Entrance",
+    rating: 5.0,
+    studentsTaught: 1200,
+    mode: "Classroom · Home Tuition · Live Online",
     highlight:
-      "Founder mentor with 40+ board toppers. Specialises in making JEE & NEET concepts click.",
+      "Lead Maths Faculty & Founder Mentor. Known for making complex JEE & Board concepts intuitive and scoring.",
   },
   {
     id: "priya-malhotra",
     name: "Priya Malhotra",
-    subjects: ["Maths", "Science"],
-    city: "Ghaziabad",
+    subjects: ["Science", "Physics"],
+    city: "Greater Noida",
     experience: 9,
     classes: "Class 6 – 10",
     rating: 4.9,
     studentsTaught: 620,
     mode: "Home · Classroom",
     highlight:
-      "Known for turning 'Maths-phobic' students into confident scorers with step-by-step methods.",
+      "Specialist in building conceptual foundation in Physics & Chemistry for middle and high school students.",
   },
   {
     id: "amit-srivastava",
     name: "Amit Srivastava",
     subjects: ["Accountancy", "Business Studies", "Economics"],
-    city: "Ghaziabad",
+    city: "Greater Noida / Ghaziabad",
     experience: 10,
     classes: "Class 11 – 12 Commerce",
-    rating: 4.8,
+    rating: 4.9,
     studentsTaught: 540,
     mode: "Classroom · Online",
     highlight:
-      "Commerce specialist who teaches with real-world case studies and past-paper drills.",
+      "Commerce specialist who teaches with real-world case studies, practical problem solving and past-paper drills.",
   },
   {
     id: "neha-agarwal",
     name: "Neha Agarwal",
-    subjects: ["Biology", "Chemistry"],
-    city: "Gurgaon",
+    subjects: ["Biology", "NEET Prep"],
+    city: "Greater Noida / Gurgaon",
     experience: 8,
     classes: "Class 11 – 12 (PCB)",
     rating: 4.9,
     studentsTaught: 480,
     mode: "Home · Online",
     highlight:
-      "NEET mentor loved for simplified diagrams, mnemonics and focused revision plans.",
+      "NEET mentor loved for simplified NCERT diagrams, mnemonics and focused entrance revision strategies.",
   },
   {
     id: "vikram-chauhan",
     name: "Vikram Chauhan",
-    subjects: ["Physics", "Maths"],
-    city: "Gurgaon",
+    subjects: ["Physics", "Chemistry"],
+    city: "Greater Noida / Delhi",
     experience: 11,
     classes: "Class 9 – 12",
     rating: 4.8,
     studentsTaught: 700,
     mode: "Classroom · Home · Online",
     highlight:
-      "Problem-solving coach who builds speed and accuracy through concept + numerical practice.",
-  },
-  {
-    id: "shalini-verma",
-    name: "Shalini Verma",
-    subjects: ["English", "Social Science", "SST"],
-    city: "Delhi",
-    experience: 7,
-    classes: "Class 6 – 10",
-    rating: 4.9,
-    studentsTaught: 430,
-    mode: "Home · Online",
-    highlight:
-      "English & SST expert who makes long chapters digestible with mind maps and storytelling.",
-  },
-  {
-    id: "deepak-yadav",
-    name: "Deepak Yadav",
-    subjects: ["Maths", "Science", "Reasoning"],
-    city: "Delhi",
-    experience: 10,
-    classes: "Class 6 – 12",
-    rating: 4.8,
-    studentsTaught: 650,
-    mode: "Classroom · Online",
-    highlight:
-      "Olympiad & NTSE coach with a library of shortcut techniques and mock-test analytics.",
-  },
-  {
-    id: "sangeeta-kumari",
-    name: "Sangeeta Kumari",
-    subjects: ["Maths", "Science"],
-    city: "Patna",
-    experience: 8,
-    classes: "Class 6 – 10",
-    rating: 4.9,
-    studentsTaught: 500,
-    mode: "Home · Classroom",
-    highlight:
-      "Patient, activity-based teacher who builds strong foundations for board-level confidence.",
-  },
-  {
-    id: "arjun-sinha",
-    name: "Arjun Sinha",
-    subjects: ["Physics", "Chemistry", "Biology"],
-    city: "Patna",
-    experience: 9,
-    classes: "Class 11 – 12 Science",
-    rating: 4.8,
-    studentsTaught: 460,
-    mode: "Classroom · Online",
-    highlight:
-      "PCMB mentor focused on board pattern + entrance exam preparation with personal mentoring.",
+      "Numerical & practical problem-solving coach who builds high speed and accuracy for entrance exams.",
   },
 ];
 
 export const onlineCoaching = {
   tagline: "Learn from anywhere in the world",
   description:
-    "Our expert tutors deliver live, interactive online classes via Zoom/Google Meet — same quality teaching, zero commute.",
+    "Live, interactive online classes led by Er. N. Jha Sir & expert faculty — same quality teaching, real-time doubt solving, zero commute.",
   stats: [
     { value: "20+", label: "Countries Reached" },
     { value: "5,000+", label: "Live Sessions Delivered" },
-    { value: "4.8★", label: "Online Student Rating" },
+    { value: "4.9★", label: "Online Student Rating" },
   ],
   slots: [
     { time: "6:00 AM", label: "Early Bird", zone: "IST" },
@@ -512,13 +460,14 @@ export const onlineCoaching = {
     { time: "9:00 PM", label: "Late Night", zone: "IST" },
   ],
   features: [
-    { icon: "🖥️", title: "Live Interactive Classes", desc: "Real-time teaching with screen sharing, whiteboard & doubt clearing — not recorded videos." },
-    { icon: "📅", title: "Flexible Scheduling", desc: "Pick time slots that work across time zones — morning, afternoon, or evening batches." },
-    { icon: "📱", title: "Recorded Sessions", desc: "Every class is recorded so students can revisit any lecture for revision." },
-    { icon: "📊", title: "Digital Progress Reports", desc: "Weekly performance analytics shared digitally with parents via WhatsApp/email." },
-    { icon: "📝", title: "Digital Study Material", desc: "PDFs, practice sheets, and notes delivered digitally — print or study on-screen." },
-    { icon: "🌍", title: "Global Access", desc: "Students from any country can join — CBSE, ICSE, State Board, or international syllabus." },
+    { icon: "🖥️", title: "Live Interactive Classes", desc: "Real-time teaching with screen sharing, digital whiteboard & doubt clearing." },
+    { icon: "📅", title: "Flexible Scheduling", desc: "Pick time slots that fit your daily schedule — morning, afternoon, or evening batches." },
+    { icon: "📱", title: "Recorded Sessions", desc: "Class recordings available so students can revise topics anytime." },
+    { icon: "📊", title: "Digital Progress Reports", desc: "Weekly test reports shared digitally with parents via WhatsApp." },
+    { icon: "📝", title: "Smart Study Material", desc: "PDFs, practice sheets, formula handbooks, and revision notes." },
+    { icon: "🌍", title: "Global Access", desc: "Students worldwide can join for CBSE, ICSE, State Board, or entrance prep." },
   ],
 };
 
 export default siteConfig;
+
