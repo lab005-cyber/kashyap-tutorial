@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { siteConfig, courses, features, faqs, tutors } from "@/config/site";
-import { getAllPosts } from "@/lib/blog";
 import Reveal from "@/components/Reveal";
 import Testimonials from "@/components/Testimonials";
 import StarRating from "@/components/StarRating";
@@ -26,7 +25,6 @@ import {
 import { FaWhatsapp, FaGlobe, FaGraduationCap } from "react-icons/fa";
 
 export default function HomePage() {
-  const latestPosts = getAllPosts().slice(0, 3);
   const c = siteConfig.contact;
 
   return (
@@ -34,13 +32,23 @@ export default function HomePage() {
       <JsonLd data={faqJsonLd(faqs)} />
 
       {/* ============ HERO SECTION ============ */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-navy-950 via-navy-900 to-navy-800 text-white">
-        {/* Glowing background lights & grids */}
-        <div className="pointer-events-none absolute inset-0">
-          <div className="absolute -right-20 -top-20 h-[500px] w-[500px] rounded-full bg-accent/20 blur-[120px]" />
-          <div className="absolute -bottom-32 -left-20 h-[450px] w-[450px] rounded-full bg-blue-600/20 blur-[100px]" />
+      <section className="relative overflow-hidden bg-navy-950 text-white">
+        {/* Background Image: Official Storefront & Interior */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/hero-storefront.webp"
+            alt="Kashyap Tutorial Main Coaching Center Storefront in Alpha 1 Greater Noida"
+            fill
+            priority
+            className="object-cover object-center scale-105 filter blur-[0.5px] brightness-[0.85]"
+          />
+          {/* Deep dark gradient overlay vignette for maximum contrast & luxury feel */}
+          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-950/85 to-navy-950/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/80" />
+          <div className="absolute -right-20 -top-20 h-[500px] w-[500px] rounded-full bg-accent/15 blur-[120px] pointer-events-none" />
+          {/* Subtle grid accent */}
           <div
-            className="absolute inset-0 opacity-[0.05]"
+            className="absolute inset-0 opacity-[0.03] pointer-events-none"
             style={{
               backgroundImage:
                 "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
@@ -49,7 +57,7 @@ export default function HomePage() {
           />
         </div>
 
-        <div className="container-x relative py-16 sm:py-20 lg:py-24">
+        <div className="container-x relative z-10 py-16 sm:py-20 lg:py-24">
           <div className="grid items-center gap-12 lg:grid-cols-12">
             
             {/* Left Column: Headlines & Call to Action */}
@@ -803,54 +811,6 @@ export default function HomePage() {
 
       {/* ============ TESTIMONIALS ============ */}
       <Testimonials />
-
-      {/* ============ BLOG PREVIEW ============ */}
-      {latestPosts.length > 0 && (
-        <section className="section bg-white">
-          <div className="container-x">
-            <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-end">
-              <div className="max-w-xl">
-                <span className="eyebrow">From Our Blog</span>
-                <h2 className="heading mt-4">Tips, guides &amp; study strategies</h2>
-              </div>
-              <Link href="/blog" className="btn-outline shrink-0">
-                Read All Posts <FiArrowRight />
-              </Link>
-            </div>
-            <div className="mt-12 grid gap-6 md:grid-cols-3">
-              {latestPosts.map((post, i) => (
-                <Reveal key={post.slug} delay={i * 80}>
-                  <Link
-                    href={`/blog/${post.slug}`}
-                    className="card group flex h-full flex-col hover:-translate-y-1 hover:border-navy-200 hover:shadow-md"
-                  >
-                    <span className="flex h-32 items-center justify-center rounded-xl bg-navy-50 text-navy-700">
-                      <FiBookOpen className="h-12 w-12 text-navy-700" />
-                    </span>
-                    <div className="mt-4 flex items-center gap-2 text-xs text-grey-500">
-                      <span>{post.readingTime}</span>
-                      <span>·</span>
-                      <span>
-                        {new Date(post.date).toLocaleDateString("en-IN", {
-                          day: "numeric",
-                          month: "short",
-                          year: "numeric",
-                        })}
-                      </span>
-                    </div>
-                    <h3 className="mt-2 font-display text-lg font-bold leading-snug text-navy-900 group-hover:text-navy-700">
-                      {post.title}
-                    </h3>
-                    <p className="mt-2 line-clamp-2 text-sm text-grey-600">
-                      {post.description}
-                    </p>
-                  </Link>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* ============ FAQ ============ */}
       <section className="section bg-grey-50">
