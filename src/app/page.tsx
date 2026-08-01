@@ -304,22 +304,12 @@ export default function HomePage() {
 
               {/* ---- ⭐ Class 11-12 PREMIUM HERO CARD ---- */}
               <Reveal delay={180}>
-                <div className="group relative overflow-hidden rounded-3xl border-2 border-royal-300/50 bg-gradient-to-br from-royal-900 via-royal-800 to-indigo-900 p-6 sm:p-7 text-white transition-all duration-500 hover:shadow-2xl hover:shadow-royal-500/25 hover:-translate-y-1">
-                  {/* Animated gradient orbs */}
+                <div className="group relative overflow-hidden rounded-3xl border border-navy-700 bg-gradient-to-br from-navy-950 via-navy-900 to-navy-800 p-6 sm:p-7 text-white shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-1">
+                  {/* Glowing background accents */}
                   <div className="pointer-events-none absolute inset-0">
-                    <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-royal-400/30 blur-3xl animate-pulse-glow" />
-                    <div className="absolute -bottom-12 -left-12 h-32 w-32 rounded-full bg-indigo-400/20 blur-3xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
-                    <div className="absolute top-1/2 right-1/4 h-20 w-20 rounded-full bg-pink-400/15 blur-2xl animate-pulse-glow" style={{ animationDelay: '0.7s' }} />
+                    <div className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-accent/15 blur-3xl" />
+                    <div className="absolute -bottom-12 -left-12 h-32 w-32 rounded-full bg-navy-600/20 blur-3xl" />
                   </div>
-                  {/* Subtle grid pattern */}
-                  <div
-                    className="pointer-events-none absolute inset-0 opacity-[0.04]"
-                    style={{
-                      backgroundImage:
-                        "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
-                      backgroundSize: "24px 24px",
-                    }}
-                  />
 
                   <div className="relative">
                     {/* Badge row */}

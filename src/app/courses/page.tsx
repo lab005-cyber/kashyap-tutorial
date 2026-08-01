@@ -27,7 +27,7 @@ export default function CoursesPage() {
       {/* Header */}
       <section className="relative overflow-hidden bg-navy-900 py-16 text-white sm:py-20">
         <div className="pointer-events-none absolute -right-24 -top-24 h-80 w-80 rounded-full bg-accent/15 blur-3xl" />
-        <div className="pointer-events-none absolute -left-16 bottom-0 h-60 w-60 rounded-full bg-royal-500/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-16 bottom-0 h-60 w-60 rounded-full bg-accent/10 blur-3xl" />
         <div className="container-x relative text-center">
           <span className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs font-semibold text-accent">
             Academic Programs
