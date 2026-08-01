@@ -193,14 +193,14 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    {/* Floating Doorstep Badge */}
-                    <div className="absolute -bottom-4 -left-4 hidden rounded-2xl border border-white/20 bg-navy-900/95 p-3.5 shadow-2xl backdrop-blur-xl sm:flex items-center gap-3">
-                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-accent text-navy-950 font-bold">
-                        <FaGraduationCap className="h-6 w-6" />
+                    {/* Doorstep Home Tuition Badge */}
+                    <div className="mt-3 flex items-center gap-3 rounded-xl border border-white/15 bg-navy-900/90 p-3 backdrop-blur-md">
+                      <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent text-navy-950 font-bold">
+                        <FaGraduationCap className="h-5 w-5" />
                       </div>
                       <div>
                         <p className="text-xs font-bold text-white">Home Tuition Available</p>
-                        <p className="text-[11px] text-accent">Quality Education at Your Doorstep!</p>
+                        <p className="text-[11px] text-amber-300">Quality Education at Your Doorstep!</p>
                       </div>
                     </div>
 
