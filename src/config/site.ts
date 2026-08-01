@@ -58,7 +58,7 @@ export const siteConfig = {
   nav: [
     { label: "Home", href: "/" },
     { label: "Courses", href: "/courses" },
-    { label: "Tutors", href: "/tutors" },
+    { label: "Our Expert Faculty", href: "/tutors" },
     { label: "Results", href: "/results" },
     { label: "Blog", href: "/blog" },
     { label: "About", href: "/about" },

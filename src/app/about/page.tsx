@@ -253,7 +253,7 @@ export default function AboutPage() {
 
           <div className="mt-8 text-center">
             <Link href="/tutors" className="btn-outline inline-flex items-center gap-2">
-              View All Tutors &amp; Subject Experts <FiArrowRight />
+              View Our Expert Faculty <FiArrowRight />
             </Link>
           </div>
         </div>

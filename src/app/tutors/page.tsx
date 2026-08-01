@@ -10,7 +10,7 @@ import { FiArrowRight, FiCheckCircle, FiAward, FiUsers, FiMapPin } from "react-i
 import { FaWhatsapp } from "react-icons/fa";
 
 export const metadata: Metadata = {
-  title: "Our Faculty & Tutors",
+  title: "Our Expert Faculty",
   description:
     "Meet the expert faculty of Kashyap Tutorial & Home Tuition led by Er. N. Jha Sir — experienced, verified tutors across Greater Noida (Alpha 1), Ghaziabad, Gurgaon, Delhi & Patna.",
   alternates: { canonical: "/tutors" },
@@ -24,7 +24,7 @@ export default function TutorsPage() {
       <JsonLd
         data={breadcrumbJsonLd([
           { name: "Home", path: "/" },
-          { name: "Tutors", path: "/tutors" },
+          { name: "Our Expert Faculty", path: "/tutors" },
         ])}
       />
 

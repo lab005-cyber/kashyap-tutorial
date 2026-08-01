@@ -549,7 +549,7 @@ export default function HomePage() {
               </p>
             </div>
             <Link href="/tutors" className="btn-outline shrink-0">
-              View All Tutors &amp; Faculty <FiArrowRight />
+              View Our Expert Faculty <FiArrowRight />
             </Link>
           </div>
 
