@@ -32,25 +32,16 @@ export default function HomePage() {
       <JsonLd data={faqJsonLd(faqs)} />
 
       {/* ============ HERO SECTION ============ */}
-      <section className="relative overflow-hidden bg-navy-950 text-white">
-        {/* Background Image: Official Storefront & Interior */}
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/images/hero-storefront.webp"
-            alt="Kashyap Tutorial Main Coaching Center Storefront in Alpha 1 Greater Noida"
-            fill
-            priority
-            className="object-cover object-center brightness-100"
-          />
-          {/* Subtle gradient vignette for text legibility while keeping storefront photo vibrant & clear */}
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-950/85 via-navy-950/60 to-navy-950/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-transparent to-navy-950/50" />
-          <div className="absolute -right-20 -top-20 h-[500px] w-[500px] rounded-full bg-accent/10 blur-[120px] pointer-events-none" />
+      <section className="relative overflow-hidden bg-gradient-to-b from-navy-950 via-navy-900 to-navy-800 text-white">
+        {/* Glowing background light accents */}
+        <div className="pointer-events-none absolute inset-0">
+          <div className="absolute -right-20 -top-20 h-[500px] w-[500px] rounded-full bg-accent/20 blur-[120px]" />
+          <div className="absolute -bottom-32 -left-20 h-[450px] w-[450px] rounded-full bg-blue-600/20 blur-[100px]" />
         </div>
 
-        <div className="container-x relative z-10 py-16 sm:py-20 lg:py-24">
+        <div className="container-x relative py-16 sm:py-20 lg:py-24">
           <div className="grid items-center gap-12 lg:grid-cols-12">
-            
+
             {/* Left Column: Headlines & Call to Action */}
             <div className="lg:col-span-7">
               <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-xs sm:text-sm font-semibold text-accent backdrop-blur-md">
@@ -142,7 +133,7 @@ export default function HomePage() {
                 <div className="relative mx-auto max-w-md lg:max-w-none">
                   {/* Glowing card border container */}
                   <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-gradient-to-b from-white/15 to-white/5 p-4 sm:p-5 backdrop-blur-xl shadow-2xl">
-                    
+
                     {/* Faculty Photo */}
                     <div className="relative h-80 sm:h-96 w-full overflow-hidden rounded-2xl bg-navy-950">
                       <Image
