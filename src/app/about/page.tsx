@@ -171,8 +171,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="mt-12 grid gap-8 md:grid-cols-2 max-w-4xl mx-auto">
-            {tutors.slice(0, 2).map((t, i) => (
+          <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 max-w-7xl mx-auto">
+            {tutors.slice(0, 4).map((t, i) => (
               <Reveal key={t.id} delay={i * 100}>
                 <article className="card group flex h-full flex-col hover:-translate-y-1.5 hover:border-navy-300 hover:shadow-xl transition-all duration-300">
                   <div className="flex items-start gap-4">

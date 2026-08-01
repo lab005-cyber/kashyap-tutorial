@@ -391,6 +391,20 @@ export const tutors: Tutor[] = [
       "Lead Maths Faculty & Founder Mentor. Known for making complex JEE & Board concepts intuitive and scoring.",
   },
   {
+    id: "managing-director",
+    name: "Managing Director",
+    image: "/images/faculty-md.webp",
+    subjects: ["Managing Director", "Physics", "Academic Leadership"],
+    city: "Greater Noida (Alpha 1)",
+    experience: 35,
+    classes: "Class 9th – 12th & Entrance Mentoring",
+    rating: 5.0,
+    studentsTaught: 3500,
+    mode: "Classroom · Institutional Management",
+    highlight:
+      "Managing Director with 35+ years of visionary academic leadership, institutional excellence, and mentoring generations of board & entrance toppers.",
+  },
+  {
     id: "riddhima-maam",
     name: "Riddhima Ma'am",
     image: "/images/faculty-riddhima.webp",
