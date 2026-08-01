@@ -1,6 +1,107 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
-  <rect width="48" height="48" rx="11" fill="#142339"/>
-  <path d="M24 13c-3-2.2-7-3-11-2.6-1 .1-1.7.9-1.7 1.9v16.2c0 1.1.9 2 2 1.9 3.4-.3 7 .4 10.7 2.7 3.7-2.3 7.3-3 10.7-2.7 1.1.1 2-.8 2-1.9V12.3c0-1-.7-1.8-1.7-1.9-4-.4-8 .4-11 2.6Z" fill="#ffffff" opacity="0.18"/>
-  <path d="M19 14v20M19 24l8-10M19 24l8 10" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
-  <circle cx="33" cy="15" r="2.4" fill="#f0b429"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Outer metallic ring gradient -->
+    <linearGradient id="silver-ring" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e2e8f0" />
+      <stop offset="40%" stop-color="#94a3b8" />
+      <stop offset="70%" stop-color="#cbd5e1" />
+      <stop offset="100%" stop-color="#64748b" />
+    </linearGradient>
+
+    <!-- Outer Navy Ring gradient -->
+    <linearGradient id="navy-ring" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b387a" />
+      <stop offset="100%" stop-color="#041836" />
+    </linearGradient>
+
+    <!-- Inner Core gradient -->
+    <radialGradient id="core-bg" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" stop-color="#1e70e3" />
+      <stop offset="60%" stop-color="#0b48a3" />
+      <stop offset="100%" stop-color="#052763" />
+    </radialGradient>
+
+    <!-- Gold Accent gradient for K -->
+    <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fde047" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+
+    <!-- Book Blue gradient -->
+    <linearGradient id="book-blue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Text Paths -->
+    <path id="text-path-top" d="M 75 256 A 181 181 0 0 1 437 256" fill="none" />
+    <path id="text-path-bottom" d="M 437 256 A 181 181 0 0 1 75 256" fill="none" />
+  </defs>
+
+  <!-- 1. Outer Metallic Rim -->
+  <circle cx="256" cy="256" r="252" fill="url(#silver-ring)" />
+  <circle cx="256" cy="256" r="242" fill="#041226" />
+
+  <!-- 2. Dark Navy Ring -->
+  <circle cx="256" cy="256" r="236" fill="url(#navy-ring)" />
+  <circle cx="256" cy="256" r="182" fill="url(#silver-ring)" />
+  
+  <!-- 3. Inner Core -->
+  <circle cx="256" cy="256" r="174" fill="url(#core-bg)" />
+
+  <!-- 4. Circular Text on Ring -->
+  <text font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="52" fill="#ffffff" letter-spacing="4">
+    <textPath href="#text-path-top" startOffset="50%" text-anchor="middle">KASHYAP</textPath>
+  </text>
+  <text font-family="'Segoe UI', Roboto, sans-serif" font-weight="900" font-size="48" fill="#ffffff" letter-spacing="4">
+    <textPath href="#text-path-bottom" startOffset="50%" text-anchor="middle">TUTORIAL</textPath>
+  </text>
+
+  <!-- Side rivets / dots -->
+  <circle cx="68" cy="256" r="12" fill="#ffffff" />
+  <circle cx="444" cy="256" r="12" fill="#ffffff" />
+
+  <!-- 5. Central Graphic Elements inside Core -->
+  <!-- Atom Icon top-left -->
+  <g transform="translate(162, 172) scale(0.7)" opacity="0.9">
+    <ellipse cx="0" cy="0" rx="22" ry="7" fill="none" stroke="#60a5fa" stroke-width="3" transform="rotate(30)" />
+    <ellipse cx="0" cy="0" rx="22" ry="7" fill="none" stroke="#60a5fa" stroke-width="3" transform="rotate(-30)" />
+    <ellipse cx="0" cy="0" rx="22" ry="7" fill="none" stroke="#60a5fa" stroke-width="3" transform="rotate(90)" />
+    <circle cx="0" cy="0" r="4" fill="#fde047" />
+  </g>
+
+  <!-- Lightbulb bottom-left -->
+  <g transform="translate(170, 290) scale(0.65)" opacity="0.9">
+    <path d="M 0 -16 C -10 -16 -16 -10 -16 0 C -16 7 -10 12 -8 16 L 8 16 C 10 12 16 7 16 0 C 16 -10 10 -16 0 -16 Z" fill="none" stroke="#fde047" stroke-width="3.5" />
+    <path d="M -6 20 L 6 20 M -4 24 L 4 24" stroke="#fde047" stroke-width="3.5" stroke-linecap="round" />
+  </g>
+
+  <!-- Upward Arrow right -->
+  <g transform="translate(325, 220) scale(0.85)" opacity="0.9">
+    <path d="M -15 15 L 15 -15 M 15 -15 L 0 -15 M 15 -15 L 15 0" fill="none" stroke="#38bdf8" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+
+  <!-- Central "K" Monogram made of 3D Books & Gold Beam -->
+  <!-- Vertical spine books -->
+  <g transform="translate(0, 0)">
+    <!-- Book 1 (Top Horizontal Book) -->
+    <rect x="270" y="152" width="70" height="20" rx="4" fill="#ffffff" />
+    <rect x="272" y="154" width="66" height="16" rx="3" fill="url(#book-blue)" />
+
+    <!-- Book 2 (Middle horizontal stacked books) -->
+    <rect x="195" y="215" width="80" height="22" rx="5" fill="#ffffff" />
+    <rect x="197" y="217" width="76" height="18" rx="4" fill="url(#book-blue)" />
+
+    <rect x="180" y="240" width="86" height="20" rx="4" fill="#ffffff" />
+    <rect x="182" y="242" width="82" height="16" rx="3" fill="url(#book-blue)" />
+
+    <!-- Main K Gold Diagonal Beam -->
+    <polygon points="260,236 345,315 315,315 240,250" fill="url(#gold-grad)" />
+    <!-- Main K Gold Pillar -->
+    <rect x="202" y="265" width="40" height="50" fill="url(#gold-grad)" rx="3" />
+
+    <!-- Large Diagonal Upper K Arm (Blue Stack) -->
+    <path d="M 230 220 L 330 152 L 350 166 L 250 234 Z" fill="url(#book-blue)" />
+  </g>
 </svg>

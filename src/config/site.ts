@@ -16,7 +16,7 @@ export const siteConfig = {
   url: process.env.NEXT_PUBLIC_SITE_URL || "https://kashyap-tutorial.vercel.app",
   description:
     "Kashyap Tutorial & Home Tuition in Alpha 1, Greater Noida. Expert Coaching & Home Tuitions by Er. N. Jha Sir & Teams for Class 6–12 (CBSE & ICSE), IIT-JEE, NEET, CUET. Quality Education at Your Doorstep!",
-  ogImage: "/images/poster-courses.jpg",
+  ogImage: "/images/poster-courses.webp",
 
   /* ----------------- CONTACT DETAILS ----------------- */
   contact: {
@@ -379,7 +379,7 @@ export const tutors: Tutor[] = [
   {
     id: "n-jha-sir",
     name: "Er. N. Jha Sir",
-    image: "/images/faculty-njha.jpg",
+    image: "/images/faculty-njha.webp",
     subjects: ["Mathematics", "IIT-JEE Maths", "Class 9-12 Maths"],
     city: "Greater Noida (Alpha 1)",
     experience: 12,

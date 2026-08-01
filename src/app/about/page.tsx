@@ -76,7 +76,7 @@ export default function AboutPage() {
             <Reveal className="lg:col-span-5">
               <div className="relative overflow-hidden rounded-3xl border-4 border-navy-900 shadow-2xl bg-navy-950">
                 <Image
-                  src="/images/faculty-njha.jpg"
+                  src="/images/faculty-njha.webp"
                   alt="Er. N. Jha Sir - Maths Faculty & Founder Mentor"
                   width={600}
                   height={750}

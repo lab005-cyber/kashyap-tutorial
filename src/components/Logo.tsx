@@ -28,7 +28,7 @@ export default function Logo({
     >
       <span className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full p-0.5 bg-gradient-to-tr from-accent via-blue-500 to-navy-800 shadow-md transition-transform duration-300 group-hover:scale-105">
         <Image
-          src="/images/logo-original.jpg"
+          src="/images/logo-original.webp"
           alt="Kashyap Tutorial Logo"
           width={44}
           height={44}

@@ -143,7 +143,7 @@ export default function HomePage() {
                     {/* Faculty Photo */}
                     <div className="relative h-80 sm:h-96 w-full overflow-hidden rounded-2xl bg-navy-950">
                       <Image
-                        src="/images/faculty-njha.jpg"
+                        src="/images/faculty-njha.webp"
                         alt="Er. N. Jha Sir - Maths Faculty & Founder Mentor at Kashyap Tutorial"
                         fill
                         priority
@@ -242,7 +242,7 @@ export default function HomePage() {
             <Reveal className="lg:col-span-6">
               <div className="relative group overflow-hidden rounded-3xl border-4 border-navy-900 shadow-2xl">
                 <Image
-                  src="/images/poster-courses.jpg"
+                  src="/images/poster-courses.webp"
                   alt="Kashyap Tutorial Official Course Banner & Classroom"
                   width={800}
                   height={1100}
