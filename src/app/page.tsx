@@ -7,6 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import TutoringPresence from "@/components/TutoringPresence";
 import JsonLd from "@/components/JsonLd";
 import BrandIcon from "@/components/BrandIcon";
+import CountUp from "@/components/CountUp";
 import { faqJsonLd } from "@/lib/seo";
 import {
   FiArrowRight,
@@ -218,7 +219,7 @@ export default function HomePage() {
           {siteConfig.metrics.map((m, i) => (
             <Reveal key={m.label} delay={i * 80} className="text-center">
               <p className="font-display text-3xl font-extrabold text-navy-900 sm:text-4xl">
-                {m.value}
+                <CountUp end={m.num} suffix={m.suffix} />
               </p>
               <p className="mt-1 text-xs sm:text-sm font-semibold text-grey-600">{m.label}</p>
             </Reveal>

@@ -49,10 +49,10 @@ export const siteConfig = {
 
   /* ----------------- KEY METRICS (Hero) ----------------- */
   metrics: [
-    { value: "200+", label: "5-Star Google Reviews" },
-    { value: "100%", label: "Concept Clarity Focus" },
-    { value: "12+", label: "Years of Excellence" },
-    { value: "1500+", label: "Students Guided" },
+    { value: "200+", num: 200, suffix: "+", label: "5-Star Google Reviews" },
+    { value: "100%", num: 100, suffix: "%", label: "Concept Clarity Focus" },
+    { value: "12+", num: 12, suffix: "+", label: "Years of Excellence" },
+    { value: "1500+", num: 1500, suffix: "+", label: "Students Guided" },
   ],
 
   /* ----------------- NAVIGATION ----------------- */
@@ -449,9 +449,9 @@ export const onlineCoaching = {
   description:
     "Live, interactive online classes led by Er. N. Jha Sir & expert faculty — same quality teaching, real-time doubt solving, zero commute.",
   stats: [
-    { value: "20+", label: "Countries Reached" },
-    { value: "5,000+", label: "Live Sessions Delivered" },
-    { value: "4.9★", label: "Online Student Rating" },
+    { value: "20+", num: 20, suffix: "+", label: "Countries Reached" },
+    { value: "5,000+", num: 5000, suffix: "+", label: "Live Sessions Delivered" },
+    { value: "4.9★", num: 4.9, decimals: 1, suffix: "★", label: "Online Student Rating" },
   ],
   slots: [
     { time: "6:00 AM", label: "Early Bird", zone: "IST" },

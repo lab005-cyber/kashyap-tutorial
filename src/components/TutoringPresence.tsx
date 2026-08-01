@@ -6,6 +6,7 @@ import { offlineCities, onlineCoaching, siteConfig } from "@/config/site";
 import type { TutorCity } from "@/config/site";
 import Reveal from "@/components/Reveal";
 import BrandIcon from "@/components/BrandIcon";
+import CountUp from "@/components/CountUp";
 import {
   FiCheck,
   FiMapPin,
@@ -318,15 +319,18 @@ export default function TutoringPresence() {
                 {onlineCoaching.stats.map((s) => (
                   <div
                     key={s.label}
-                    className="flex items-center gap-3 rounded-2xl border border-grey-200 bg-white p-5"
+                    className="flex items-center gap-3.5 rounded-2xl border border-grey-200 bg-white p-5 shadow-xs"
                   >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-accent/15 font-display text-lg font-extrabold text-accent-dark">
-                      {s.value.split("+")[0]}
-                      {s.value.includes("+") ? "+" : ""}
+                    <span className="inline-flex min-w-[60px] px-3.5 py-2 shrink-0 items-center justify-center rounded-xl bg-amber-400/20 font-display text-base sm:text-lg font-extrabold text-navy-950 border border-amber-400/40 whitespace-nowrap">
+                      {s.num ? (
+                        <CountUp end={s.num} suffix={s.suffix || ""} decimals={s.decimals || 0} />
+                      ) : (
+                        s.value
+                      )}
                     </span>
                     <div>
-                      <p className="font-display font-bold text-navy-900">{s.value}</p>
-                      <p className="text-xs text-grey-500">{s.label}</p>
+                      <p className="font-display font-bold text-navy-900 text-base">{s.value}</p>
+                      <p className="text-xs font-medium text-grey-600">{s.label}</p>
                     </div>
                   </div>
                 ))}
