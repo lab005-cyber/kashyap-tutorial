@@ -233,7 +233,7 @@ export default function TutoringPresence() {
                     </div>
                     <div className="rounded-2xl bg-white/5 p-4">
                       <p className="font-display text-2xl font-bold text-accent">
-                        {city.areas.length * 4}+
+                        {city.localitiesCount || `${city.areas.length * 4}+`}
                       </p>
                       <p className="mt-0.5 text-xs text-grey-400">Localities covered</p>
                     </div>

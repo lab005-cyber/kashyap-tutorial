@@ -303,6 +303,7 @@ export type TutorCity = {
   areas: string[];
   available: boolean;
   tutorCount: number;
+  localitiesCount?: string;
   since: number;
 };
 
@@ -314,7 +315,8 @@ export const offlineCities: TutorCity[] = [
     tagline: "Main Center & Headquarters — Alpha 1 Market",
     areas: ["Alpha 1 & 2, Beta 1 & 2", "Gamma, Delta, Sector Pi", "Knowledge Park, Gaur City", "Pari Chowk, Surajpur"],
     available: true,
-    tutorCount: 30,
+    tutorCount: 250,
+    localitiesCount: "40+",
     since: 2012,
   },
   {

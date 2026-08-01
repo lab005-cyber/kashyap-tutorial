@@ -48,10 +48,10 @@ export default function TutorsPage() {
       <section className="border-b border-grey-200 bg-white">
         <div className="container-x grid grid-cols-2 gap-6 py-8 sm:grid-cols-4">
           {[
-            { icon: <FiUsers />, val: "10+", label: "Expert Tutors" },
+            { icon: <FiUsers />, val: "250+", label: "Offline Tutors" },
             { icon: <FiAward />, val: "12+ yrs", label: "Teaching Experience" },
             { icon: <FiCheckCircle />, val: "100%", label: "Background Verified" },
-            { icon: <FiMapPin />, val: "Alpha 1 & 5 Cities", label: "Locations Covered" },
+            { icon: <FiMapPin />, val: "40+ Localities", label: "Greater Noida Covered" },
           ].map((s) => (
             <div key={s.label} className="flex items-center gap-3 justify-center sm:justify-start">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-navy-50 text-navy-800">
