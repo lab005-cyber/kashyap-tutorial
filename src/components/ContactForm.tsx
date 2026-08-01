@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { siteConfig } from "@/config/site";
 import { FiSend, FiLoader, FiCheckCircle, FiAlertCircle } from "react-icons/fi";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -9,6 +8,7 @@ type Status = "idle" | "loading" | "success" | "error";
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [errorMsg, setErrorMsg] = useState("");
+  const [submittedName, setSubmittedName] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -26,7 +26,6 @@ export default function ContactForm() {
     const botcheck = formData.get("botcheck") ? true : false;
 
     try {
-      // Call secure server API route (keeps API keys completely hidden from client bundle)
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -44,42 +43,17 @@ export default function ContactForm() {
       const data = await res.json();
 
       if (data.success) {
+        setSubmittedName(name);
         setStatus("success");
         form.reset();
       } else {
-        // Safe client fallback to WhatsApp if server API faces upstream error
-        triggerWhatsAppFallback(name, phone, email, standard, interest, message);
-        setStatus("success");
-        form.reset();
+        setStatus("error");
+        setErrorMsg(data.message || "Failed to send enquiry. Please try again.");
       }
     } catch {
-      // Fallback if client is offline or network fails
-      triggerWhatsAppFallback(name, phone, email, standard, interest, message);
-      setStatus("success");
-      form.reset();
+      setStatus("error");
+      setErrorMsg("Network error. Please check your internet connection.");
     }
-  }
-
-  function triggerWhatsAppFallback(
-    name: string,
-    phone: string,
-    email: string,
-    standard: string,
-    interest: string,
-    message: string
-  ) {
-    const waMessage = `Hello Kashyap Tutorial! New Enquiry:
-• Name: ${name}
-• Phone: ${phone}
-• Email: ${email}
-• Class: ${standard}
-• Interested In: ${interest}
-• Message: ${message}`;
-
-    const url = `https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(
-      waMessage
-    )}`;
-    window.open(url, "_blank");
   }
 
   return (
@@ -95,14 +69,14 @@ export default function ContactForm() {
       />
 
       {status === "success" && (
-        <div className="flex items-start gap-3 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900 shadow-sm">
-          <FiCheckCircle className="mt-0.5 h-5 w-5 shrink-0 text-emerald-600" />
+        <div className="flex items-start gap-3 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-sm text-emerald-900 shadow-sm">
+          <FiCheckCircle className="mt-0.5 h-6 w-6 shrink-0 text-emerald-600" />
           <div>
             <p className="font-bold text-base text-emerald-950">
-              Thank you! Your enquiry has been received successfully.
+              Thank you {submittedName ? `, ${submittedName}` : ""}! Your enquiry has been sent to our team.
             </p>
-            <p className="mt-1 text-xs text-emerald-800">
-              Er. N. Jha Sir &amp; Team will review your details and get in touch with you shortly.
+            <p className="mt-1 text-xs leading-relaxed text-emerald-800">
+              We have received your details. Er. N. Jha Sir &amp; Team will contact you via email or phone within 24 hours.
             </p>
           </div>
         </div>
@@ -197,17 +171,17 @@ export default function ContactForm() {
       >
         {status === "loading" ? (
           <>
-            <FiLoader className="animate-spin h-5 w-5" /> Submitting Securely...
+            <FiLoader className="animate-spin h-5 w-5" /> Sending to Email...
           </>
         ) : (
           <>
-            <FiSend className="h-5 w-5" /> Send Message
+            <FiSend className="h-5 w-5" /> Submit Enquiry
           </>
         )}
       </button>
 
       <p className="text-center text-xs text-grey-500">
-        We respect your privacy. Your details are strictly confidential and encrypted.
+        We respect your privacy. Your details are strictly confidential and delivered directly to our admin team.
       </p>
 
       <style jsx>{`
