@@ -23,7 +23,7 @@ export const siteConfig = {
     phone: "+91 7903244838",
     phoneHref: "+917903244838", // no spaces, for tel: links
     whatsapp: "917903244838",
-    email: "Kashyaptutorial014@gmail.com",
+    email: "kashyaptutorial014@gmail.com",
     address: {
       line1: "Alpha 1",
       line2: "Near Alpha 1 Market",
