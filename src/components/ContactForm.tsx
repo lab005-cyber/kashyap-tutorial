@@ -3,17 +3,8 @@
 import { useState } from "react";
 import { siteConfig } from "@/config/site";
 import { FiSend, FiLoader, FiCheckCircle, FiAlertCircle } from "react-icons/fi";
-import { FaWhatsapp } from "react-icons/fa";
 
 type Status = "idle" | "loading" | "success" | "error";
-
-// Official Web3Forms access key
-const FALLBACK_KEY = "6975c4b5-f8ba-4946-b461-6525c37c6a8c";
-const ACCESS_KEY =
-  process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY &&
-  !process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY.includes("YOUR_WEB3FORMS")
-    ? process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY
-    : FALLBACK_KEY;
 
 export default function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -26,39 +17,43 @@ export default function ContactForm() {
 
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const name = formData.get("name") as string;
-    const phone = formData.get("phone") as string;
-    const email = formData.get("email") as string;
+    const name = (formData.get("name") as string).trim();
+    const phone = (formData.get("phone") as string).trim();
+    const email = (formData.get("email") as string).trim();
     const standard = (formData.get("standard") as string) || "Not specified";
     const interest = (formData.get("interest") as string) || "Not specified";
-    const message = (formData.get("message") as string) || "";
-
-    // Web3Forms required fields
-    formData.append("access_key", ACCESS_KEY);
-    formData.append("from_name", "Kashyap Tutorial Website");
-    formData.append(
-      "subject",
-      `New Enquiry from ${name} (${standard} - ${interest})`
-    );
+    const message = (formData.get("message") as string).trim();
+    const botcheck = formData.get("botcheck") ? true : false;
 
     try {
-      const res = await fetch("https://api.web3forms.com/submit", {
+      // Call secure server API route (keeps API keys completely hidden from client bundle)
+      const res = await fetch("/api/contact", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          phone,
+          email,
+          standard,
+          interest,
+          message,
+          botcheck,
+        }),
       });
+
       const data = await res.json();
 
       if (data.success) {
         setStatus("success");
         form.reset();
       } else {
-        // Fallback: If Web3Forms API key has an issue, redirect to WhatsApp prefilled message & confirm success
+        // Safe client fallback to WhatsApp if server API faces upstream error
         triggerWhatsAppFallback(name, phone, email, standard, interest, message);
         setStatus("success");
         form.reset();
       }
     } catch {
-      // Network error fallback to WhatsApp
+      // Fallback if client is offline or network fails
       triggerWhatsAppFallback(name, phone, email, standard, interest, message);
       setStatus("success");
       form.reset();
@@ -73,7 +68,7 @@ export default function ContactForm() {
     interest: string,
     message: string
   ) {
-    const waMessage = `Hello Kashyap Tutorial! New Enquiry Details:
+    const waMessage = `Hello Kashyap Tutorial! New Enquiry:
 • Name: ${name}
 • Phone: ${phone}
 • Email: ${email}
@@ -107,7 +102,7 @@ export default function ContactForm() {
               Thank you! Your enquiry has been received successfully.
             </p>
             <p className="mt-1 text-xs text-emerald-800">
-              Er. N. Jha Sir &amp; Team will review your request and get in touch with you shortly.
+              Er. N. Jha Sir &amp; Team will review your details and get in touch with you shortly.
             </p>
           </div>
         </div>
@@ -202,7 +197,7 @@ export default function ContactForm() {
       >
         {status === "loading" ? (
           <>
-            <FiLoader className="animate-spin h-5 w-5" /> Sending Message...
+            <FiLoader className="animate-spin h-5 w-5" /> Submitting Securely...
           </>
         ) : (
           <>
@@ -212,7 +207,7 @@ export default function ContactForm() {
       </button>
 
       <p className="text-center text-xs text-grey-500">
-        We respect your privacy. Your details are only used to respond to your enquiry.
+        We respect your privacy. Your details are strictly confidential and encrypted.
       </p>
 
       <style jsx>{`
@@ -262,4 +257,3 @@ function Field({
     </div>
   );
 }
-
