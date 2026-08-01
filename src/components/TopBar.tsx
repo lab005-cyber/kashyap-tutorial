@@ -33,7 +33,7 @@ export default function TopBar() {
           </a>
           <span className="text-white/20">|</span>
           <span className="inline-flex items-center gap-1.5 text-grey-300">
-            <span>Mon - Sat: 9:00 AM - 10:00 PM</span>
+            <span>Mon - Sun: 9:00 AM - 10:00 PM</span>
           </span>
         </div>
       </div>

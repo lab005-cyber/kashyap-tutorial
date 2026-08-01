@@ -164,7 +164,7 @@ export default function Footer() {
             <li className="flex gap-3">
               <FiClock className="mt-0.5 h-5 w-5 shrink-0 text-accent" />
               <span className="text-grey-400">
-                Mon - Sat: 9:00 AM - 10:00 PM
+                Mon - Sun: 9:00 AM - 10:00 PM
               </span>
             </li>
           </ul>
