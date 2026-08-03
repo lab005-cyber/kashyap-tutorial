@@ -386,7 +386,7 @@ export const tutors: Tutor[] = [
     classes: "Class 9th – 12th & Entrance Mentoring",
     rating: 5.0,
     studentsTaught: 3500,
-    mode: "Classroom · Institutional Management",
+    mode: "MD · Institutional Management",
     highlight:
       "Managing Director (MD) of Kashyap Tutorial & Home Tuition with 35+ years of visionary academic leadership, institutional excellence, and mentoring generations of board & entrance toppers.",
   },

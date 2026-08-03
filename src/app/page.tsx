@@ -678,7 +678,7 @@ export default function HomePage() {
                   </div>
 
                   <p className="mt-4 rounded-xl bg-amber-500/10 border border-amber-400/30 px-3 py-2 text-center text-xs font-bold text-navy-950">
-                    Mode: {t.mode}
+                    {t.id === "pankaj-jha-sir-md" ? t.mode : `Mode: ${t.mode}`}
                   </p>
 
                   <div className="mt-5 grid grid-cols-2 gap-2">
