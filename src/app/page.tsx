@@ -305,7 +305,7 @@ export default function HomePage() {
                     Official Banner &amp; Center Overview
                   </span>
                   <h3 className="mt-2 font-display text-xl font-extrabold">
-                    Alpha 1, Greater Noida (Near Alpha 1 Market)
+                    Alpha 1, Commercial Belt, Greater Noida
                   </h3>
                   <p className="text-xs text-grey-200 mt-1">
                     Call / WhatsApp: <span className="text-amber-300 font-bold">7903244838</span>
@@ -663,8 +663,17 @@ export default function HomePage() {
                       <p className="text-xs text-grey-500">Experience</p>
                     </div>
                     <div>
-                      <p className="font-display font-bold text-navy-900">{t.studentsTaught}+</p>
-                      <p className="text-xs text-grey-500">Students Taught</p>
+                      {t.id === "pankaj-jha-sir-md" ? (
+                        <>
+                          <p className="font-display font-bold text-navy-900">Management</p>
+                          <p className="text-xs text-grey-500">Leadership</p>
+                        </>
+                      ) : (
+                        <>
+                          <p className="font-display font-bold text-navy-900">{t.studentsTaught}+</p>
+                          <p className="text-xs text-grey-500">Students Taught</p>
+                        </>
+                      )}
                     </div>
                   </div>
 

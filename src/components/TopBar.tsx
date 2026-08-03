@@ -17,7 +17,7 @@ export default function TopBar() {
           <p className="tracking-wide">
             <strong className="font-bold text-white">Admissions Open 2026-27:</strong>{" "}
             <span className="text-grey-300">
-              Scholarship Test &amp; Free 3-Day Demo Classes in Alpha 1, Greater Noida!
+              Scholarship Test &amp; Free 3-Day Demo Classes in Alpha 1, Commercial Belt, Greater Noida!
             </span>
           </p>
         </div>

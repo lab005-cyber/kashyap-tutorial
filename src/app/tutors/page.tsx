@@ -120,8 +120,17 @@ export default function TutorsPage() {
                       <p className="text-xs text-grey-500">Experience</p>
                     </div>
                     <div>
-                      <p className="font-display font-bold text-navy-900">{t.studentsTaught}+</p>
-                      <p className="text-xs text-grey-500">Students Taught</p>
+                      {t.id === "pankaj-jha-sir-md" ? (
+                        <>
+                          <p className="font-display font-bold text-navy-900">Management</p>
+                          <p className="text-xs text-grey-500">Leadership</p>
+                        </>
+                      ) : (
+                        <>
+                          <p className="font-display font-bold text-navy-900">{t.studentsTaught}+</p>
+                          <p className="text-xs text-grey-500">Students Taught</p>
+                        </>
+                      )}
                     </div>
                   </div>
 

@@ -25,8 +25,8 @@ export const siteConfig = {
     whatsapp: "917903244838",
     email: "kashyaptutorial014@gmail.com",
     address: {
-      line1: "Alpha 1",
-      line2: "Near Alpha 1 Market",
+      line1: "Alpha 1, Commercial Belt",
+      line2: "Greater Noida",
       city: "Greater Noida",
       state: "Uttar Pradesh",
       pincode: "201310",
@@ -273,7 +273,7 @@ export const toppers = [
 export const faqs = [
   {
     q: "Where is Kashyap Tutorial located?",
-    a: "We are located at Alpha 1, Greater Noida (Near Alpha 1 Market). We offer classroom coaching at our center as well as Home Tuitions across Greater Noida, Ghaziabad, Gurgaon, Delhi & Patna.",
+    a: "We are located at Alpha 1, Commercial Belt, Greater Noida. We offer classroom coaching at our center as well as Home Tuitions across Greater Noida, Ghaziabad, Gurgaon, Delhi & Patna.",
   },
   {
     q: "Who leads the faculty at Kashyap Tutorial?",
@@ -311,7 +311,7 @@ export const offlineCities: TutorCity[] = [
     name: "Greater Noida",
     state: "Uttar Pradesh",
     icon: "pin",
-    tagline: "Main Center & Headquarters — Alpha 1 Market",
+    tagline: "Main Center & Headquarters — Alpha 1, Commercial Belt, Greater Noida",
     areas: ["Alpha 1 & 2, Beta 1 & 2", "Gamma, Delta, Sector Pi", "Knowledge Park, Gaur City", "Pari Chowk, Surajpur"],
     available: true,
     tutorCount: 250,
@@ -377,25 +377,11 @@ export type Tutor = {
 
 export const tutors: Tutor[] = [
   {
-    id: "n-jha-sir",
-    name: "Er. N. Jha Sir",
-    image: "/images/faculty-njha.webp",
-    subjects: ["Mathematics", "IIT-JEE Maths", "Class 9-12 Maths"],
-    city: "Greater Noida (Alpha 1)",
-    experience: 12,
-    classes: "Class 8 – 12 & Entrance",
-    rating: 5.0,
-    studentsTaught: 1200,
-    mode: "Classroom · Home Tuition · Live Online",
-    highlight:
-      "Lead Maths Faculty & Founder Mentor. Known for making complex JEE & Board concepts intuitive and scoring.",
-  },
-  {
     id: "pankaj-jha-sir-md",
     name: "Pankaj Jha Sir",
     image: "/images/faculty-md.webp",
     subjects: ["Managing Director (MD)", "Physics", "Academic Leadership"],
-    city: "Greater Noida (Alpha 1)",
+    city: "Alpha 1, Commercial Belt, Greater Noida",
     experience: 35,
     classes: "Class 9th – 12th & Entrance Mentoring",
     rating: 5.0,
@@ -405,11 +391,25 @@ export const tutors: Tutor[] = [
       "Managing Director (MD) of Kashyap Tutorial & Home Tuition with 35+ years of visionary academic leadership, institutional excellence, and mentoring generations of board & entrance toppers.",
   },
   {
+    id: "n-jha-sir",
+    name: "Er. N. Jha Sir",
+    image: "/images/faculty-njha.webp",
+    subjects: ["Mathematics", "IIT-JEE Maths", "Class 9-12 Maths"],
+    city: "Alpha 1, Commercial Belt, Greater Noida",
+    experience: 12,
+    classes: "Class 8 – 12 & Entrance",
+    rating: 5.0,
+    studentsTaught: 1200,
+    mode: "Classroom · Home Tuition · Live Online",
+    highlight:
+      "Lead Maths Faculty & Founder Mentor. Known for making complex JEE & Board concepts intuitive and scoring.",
+  },
+  {
     id: "riddhima-maam",
     name: "Riddhima Ma'am",
     image: "/images/faculty-riddhima.webp",
     subjects: ["All Core Subjects (KG-10th)", "Science", "Maths", "English"],
-    city: "Greater Noida (Alpha 1)",
+    city: "Alpha 1, Commercial Belt, Greater Noida",
     experience: 7,
     classes: "KG – Class 10th",
     rating: 5.0,
@@ -423,7 +423,7 @@ export const tutors: Tutor[] = [
     name: "Muskan Sodhi Ma'am",
     image: "/images/faculty-muskan.webp",
     subjects: ["All Core Subjects (KG-8th)", "Mathematics", "Science", "English"],
-    city: "Greater Noida (Alpha 1)",
+    city: "Alpha 1, Commercial Belt, Greater Noida",
     experience: 5,
     classes: "KG – Class 8th",
     rating: 5.0,

@@ -15,7 +15,7 @@ import { FaWhatsapp } from "react-icons/fa";
 export const metadata: Metadata = {
   title: "Contact Us - Kashyap Tutorial & Home Tuition",
   description:
-    "Contact Kashyap Tutorial at Alpha 1, Greater Noida (Near Alpha 1 Market). Call / WhatsApp 7903244838 to book a free demo class or arrange 1-on-1 Home Tuition.",
+    "Contact Kashyap Tutorial at Alpha 1, Commercial Belt, Greater Noida. Call / WhatsApp 7903244838 to book a free demo class or arrange 1-on-1 Home Tuition.",
   alternates: { canonical: "/contact" },
 };
 
