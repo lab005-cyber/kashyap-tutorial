@@ -81,7 +81,7 @@ export default function HomePage() {
 
               {/* Sub-headline / Tagline */}
               <p className="mt-4 font-display text-lg sm:text-xl font-bold text-amber-300">
-                India&apos;s Premium Home Tuition &amp; Coaching Platform.
+                India&apos;s Premium Coaching Platform &amp; Home Tuition.
               </p>
 
               <p className="mt-4 max-w-2xl text-base sm:text-lg leading-relaxed text-grey-300">
