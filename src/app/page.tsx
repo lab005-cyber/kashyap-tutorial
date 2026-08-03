@@ -115,7 +115,7 @@ export default function HomePage() {
                     🏆
                   </span>
                   <div>
-                    <p className="font-display text-base font-extrabold text-white">10+ Yrs</p>
+                    <p className="font-display text-base font-extrabold text-white">12+ Yrs</p>
                     <p className="text-[11px] text-grey-300">Experience</p>
                   </div>
                 </div>
