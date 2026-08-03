@@ -55,7 +55,7 @@ export default function HomePage() {
             {/* Left Column: Punchline Headlines & CTAs */}
             <div className="lg:col-span-7">
               {/* Header Badge */}
-              <div className="inline-flex items-center gap-2.5 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-xs sm:text-sm font-bold text-accent backdrop-blur-md">
+              <div className="inline-flex flex-wrap items-center gap-2 rounded-full border border-amber-400/30 bg-amber-400/10 px-4 py-1.5 text-xs sm:text-sm font-bold text-accent backdrop-blur-md">
                 <span className="relative flex h-2.5 w-2.5">
                   <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-accent opacity-75" />
                   <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-accent" />
@@ -63,7 +63,11 @@ export default function HomePage() {
                 Trusted by 5000+ Students
                 <span className="text-white/30">|</span>
                 <span className="inline-flex items-center gap-1 text-amber-300">
-                  <FiStar className="fill-amber-400 text-amber-400 h-3.5 w-3.5" /> 4.9 Rating
+                  <FiStar className="fill-amber-400 text-amber-400 h-3.5 w-3.5" /> 5-Star Rating
+                </span>
+                <span className="text-white/30">|</span>
+                <span className="inline-flex items-center gap-1 text-amber-300">
+                  🏆 12+ Years Experience
                 </span>
               </div>
 

@@ -38,10 +38,10 @@ export default function Logo({
       </span>
       {showText && (
         <span className="flex flex-col justify-center leading-tight">
-          <span className={`font-display text-sm sm:text-base font-extrabold tracking-tight ${textColor}`}>
+          <span className={`font-sans text-sm sm:text-base font-black tracking-tight ${textColor}`}>
             KASHYAP TUTORIAL
           </span>
-          <span className={`text-[10px] sm:text-[11px] tracking-wider uppercase ${subColor}`}>
+          <span className={`text-[10px] sm:text-[11px] font-bold tracking-wider uppercase ${subColor}`}>
             &amp; HOME TUITION
           </span>
         </span>
