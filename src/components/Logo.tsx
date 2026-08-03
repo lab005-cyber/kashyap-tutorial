@@ -37,12 +37,12 @@ export default function Logo({
         />
       </span>
       {showText && (
-        <span className="flex flex-col justify-center leading-tight">
-          <span className={`font-sans text-sm sm:text-base font-black tracking-tight ${textColor}`}>
-            KASHYAP TUTORIAL
+        <span className="flex flex-col justify-center leading-[1.15]">
+          <span className={`font-display text-base sm:text-[17px] font-black tracking-tight ${textColor}`}>
+            Kashyap Tutorial
           </span>
-          <span className={`text-[10px] sm:text-[11px] font-bold tracking-wider uppercase ${subColor}`}>
-            &amp; HOME TUITION
+          <span className={`font-display text-[10px] sm:text-[11px] font-bold tracking-wide ${subColor}`}>
+            &amp; Home Tuition
           </span>
         </span>
       )}
