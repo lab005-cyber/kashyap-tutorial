@@ -383,7 +383,7 @@ export const tutors: Tutor[] = [
     subjects: ["Managing Director (MD)", "Physics", "Academic Leadership"],
     city: "Alpha 1, Commercial Belt, Greater Noida",
     experience: 35,
-    classes: "Class 9th – 12th & Entrance Mentoring",
+    classes: "Managing Director & Academic Leadership",
     rating: 5.0,
     studentsTaught: 3500,
     mode: "MD · Institutional Management",
@@ -400,7 +400,7 @@ export const tutors: Tutor[] = [
     classes: "Class 8 – 12 & Entrance",
     rating: 5.0,
     studentsTaught: 1200,
-    mode: " Home Tuition · Live Online",
+    mode: "Home Tuition · Live Online",
     highlight:
       "Lead Maths Faculty & Founder Mentor. Known for making complex JEE & Board concepts intuitive and scoring.",
   },
