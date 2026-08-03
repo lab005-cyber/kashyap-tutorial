@@ -51,7 +51,7 @@ export const siteConfig = {
     { value: "200+", num: 200, suffix: "+", label: "5-Star Google Reviews" },
     { value: "100%", num: 100, suffix: "%", label: "Concept Clarity Focus" },
     { value: "12+", num: 12, suffix: "+", label: "Years of Excellence" },
-    { value: "1500+", num: 1500, suffix: "+", label: "Students Guided" },
+    { value: "5000+", num: 5000, suffix: "+", label: "Students Mentored" },
   ],
 
   /* ----------------- NAVIGATION ----------------- */

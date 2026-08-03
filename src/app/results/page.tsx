@@ -45,7 +45,7 @@ export default function ResultsPage() {
           {[
             { icon: <FiAward />, val: "120+", label: "Distinction holders (90%+)" },
             { icon: <FiTrendingUp />, val: "95%", label: "Overall pass rate" },
-            { icon: <FiSmile />, val: "1500+", label: "Happy students & parents" },
+            { icon: <FiSmile />, val: "5000+", label: "Students Mentored" },
           ].map((s, i) => (
             <Reveal key={s.label} delay={i * 90} className="text-center">
               <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-accent/15 text-xl text-accent-dark">

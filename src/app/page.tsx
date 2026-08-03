@@ -706,7 +706,7 @@ export default function HomePage() {
                 {[
                   { icon: <FiAward />, val: "120+", label: "Distinctions" },
                   { icon: <FiTrendingUp />, val: "100%", label: "Concept Focus" },
-                  { icon: <FiUsers />, val: "1500+", label: "Happy Students" },
+                  { icon: <FiUsers />, val: "5000+", label: "Students Mentored" },
                 ].map((stat) => (
                   <div
                     key={stat.label}

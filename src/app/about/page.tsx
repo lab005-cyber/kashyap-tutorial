@@ -66,7 +66,7 @@ export default function AboutPage() {
             12+ Years of Academic Excellence
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-grey-300 text-base sm:text-lg">
-            Led by <span className="text-white font-bold">Er. N. Jha Sir &amp; Teams</span> at Alpha 1, Greater Noida. Trusted by 1500+ students and parents with <span className="text-amber-300 font-bold">200+ 5-Star Google Reviews</span>.
+            Led by <span className="text-white font-bold">Er. N. Jha Sir &amp; Teams</span> at Alpha 1, Greater Noida. Trusted by 5000+ students and parents with <span className="text-amber-300 font-bold">200+ 5-Star Google Reviews</span>.
           </p>
         </div>
       </section>
@@ -115,7 +115,7 @@ export default function AboutPage() {
                   Kashyap Tutorial &amp; Home Tuition was founded with a dedicated goal: to make high-quality, concept-oriented education accessible to every student, whether in classroom batches or through 1-on-1 home tuitions.
                 </p>
                 <p>
-                  Under the leadership of <strong className="text-navy-900">Er. N. Jha Sir</strong>, we have guided over 1500+ students across Class 6th to 12th (CBSE &amp; ICSE), IIT-JEE, NEET (UG), and CUET. Our main coaching center is located in <strong className="text-navy-900">Alpha 1, Greater Noida (Near Alpha 1 Market)</strong>.
+                  Under the leadership of <strong className="text-navy-900">Er. N. Jha Sir</strong>, we have mentored over 5000+ students across Class 6th to 12th (CBSE &amp; ICSE), IIT-JEE, NEET (UG), and CUET. Our main coaching center is located in <strong className="text-navy-900">Alpha 1, Greater Noida (Near Alpha 1 Market)</strong>.
                 </p>
                 <p>
                   Additionally, our Home Tuition wing delivers verified, expert tutors to your doorstep across Greater Noida, Ghaziabad, Gurgaon, Delhi, and Patna for all subjects from KG to 12th.
@@ -132,8 +132,8 @@ export default function AboutPage() {
                   <p className="text-xs font-semibold text-grey-600">Years Experience</p>
                 </div>
                 <div className="rounded-xl bg-navy-50 p-4">
-                  <p className="font-display text-3xl font-extrabold text-navy-900">1500+</p>
-                  <p className="text-xs font-semibold text-grey-600">Students Taught</p>
+                  <p className="font-display text-3xl font-extrabold text-navy-900">5000+</p>
+                  <p className="text-xs font-semibold text-grey-600">Students Mentored</p>
                 </div>
                 <div className="rounded-xl bg-navy-50 p-4">
                   <p className="font-display text-3xl font-extrabold text-amber-500">100%</p>
