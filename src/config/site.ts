@@ -400,7 +400,7 @@ export const tutors: Tutor[] = [
     classes: "Class 8 – 12 & Entrance",
     rating: 5.0,
     studentsTaught: 1200,
-    mode: "Classroom · Home Tuition · Live Online",
+    mode: " Home Tuition · Live Online",
     highlight:
       "Lead Maths Faculty & Founder Mentor. Known for making complex JEE & Board concepts intuitive and scoring.",
   },
