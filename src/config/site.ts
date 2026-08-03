@@ -179,8 +179,8 @@ export const features = [
   },
   {
     icon: "users",
-    title: "Small Batch Size",
-    desc: "Limited students per batch to guarantee personal attention for every single learner.",
+    title: "Offline Classroom & Small Batches",
+    desc: "Limited students per batch in offline classroom coaching at Alpha 1, Greater Noida to guarantee personal attention for every single learner.",
   },
   {
     icon: "test",
