@@ -95,7 +95,7 @@ export default function HomePage() {
                     ⭐
                   </span>
                   <div>
-                    <p className="font-display text-base font-extrabold text-white">4.9 Rating</p>
+                    <p className="font-display text-base font-extrabold text-white">5.0 Rating</p>
                     <p className="text-[11px] text-grey-300">Google Reviews</p>
                   </div>
                 </div>

@@ -439,7 +439,7 @@ export const tutors: Tutor[] = [
     city: "Greater Noida",
     experience: 9,
     classes: "Class 6 – 10",
-    rating: 4.9,
+    rating: 5.0,
     studentsTaught: 620,
     mode: "Home · Classroom",
     highlight:
@@ -452,7 +452,7 @@ export const tutors: Tutor[] = [
     city: "Greater Noida / Ghaziabad",
     experience: 11,
     classes: "Class 11 – 12 (PCM / PCB)",
-    rating: 4.9,
+    rating: 5.0,
     studentsTaught: 580,
     mode: "Classroom · Online",
     highlight:
@@ -465,7 +465,7 @@ export const tutors: Tutor[] = [
     city: "Greater Noida / Gurgaon",
     experience: 8,
     classes: "Class 11 – 12 (PCB)",
-    rating: 4.9,
+    rating: 5.0,
     studentsTaught: 480,
     mode: "Home · Online",
     highlight:
@@ -478,7 +478,7 @@ export const tutors: Tutor[] = [
     city: "Greater Noida / Delhi",
     experience: 11,
     classes: "Class 9 – 12",
-    rating: 4.8,
+    rating: 5.0,
     studentsTaught: 700,
     mode: "Classroom · Home · Online",
     highlight:
@@ -493,7 +493,7 @@ export const onlineCoaching = {
   stats: [
     { value: "20+", num: 20, suffix: "+", label: "Countries Reached" },
     { value: "5,000+", num: 5000, suffix: "+", label: "Live Sessions Delivered" },
-    { value: "4.9★", num: 4.9, decimals: 1, suffix: "★", label: "Online Student Rating" },
+    { value: "5.0★", num: 5.0, decimals: 1, suffix: "★", label: "Online Student Rating" },
   ],
   slots: [
     { time: "6:00 AM", label: "Early Bird", zone: "IST" },
